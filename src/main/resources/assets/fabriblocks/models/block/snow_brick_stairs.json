@@ -1,0 +1,8 @@
+{
+    "parent": "block/stairs",
+    "textures": {
+        "bottom": "fabriblocks:block/snow_bricks",
+        "top": "fabriblocks:block/snow_bricks",
+        "side": "fabriblocks:block/snow_bricks"
+    }
+}

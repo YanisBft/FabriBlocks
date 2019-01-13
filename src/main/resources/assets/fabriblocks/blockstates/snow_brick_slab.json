@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "fabriblocks:block/snow_brick_slab" },
+        "type=top": { "model": "fabriblocks:block/snow_brick_slab_top" },
+        "type=double": { "model": "fabriblocks:block/snow_bricks" }
+    }
+}

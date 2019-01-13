@@ -1,0 +1,12 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fabriblocks:scute_block"
+    }
+  ],
+  "result": {
+    "item": "minecraft:scute",
+    "count": 9
+  }
+}

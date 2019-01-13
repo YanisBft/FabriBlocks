@@ -1,0 +1,15 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "fabriblocks:snow_bricks"
+    }
+  },
+  "result": {
+    "item": "fabriblocks:snow_brick_slab",
+    "count": 6
+  }
+}

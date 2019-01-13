@@ -1,0 +1,15 @@
+{
+	"block.fabriblocks.snow_bricks": "Briques de neige",
+	"block.fabriblocks.snow_brick_stairs": "Escalier en briques de neige",
+	"block.fabriblocks.snow_brick_slab": "Dalle en briques de neige",
+	"block.fabriblocks.snow_brick_wall": "Muret en briques de neige",
+	"block.fabriblocks.stone_wall": "Muret de roche",
+	"block.fabriblocks.smooth_stone_wall": "Muret de roche lisse",
+	"block.fabriblocks.polished_granite_wall": "Muret en granite poli",
+	"block.fabriblocks.polished_diorite_wall": "Muret en diorite polie",
+	"block.fabriblocks.polished_andesite_wall": "Muret en andésite polie",
+	"block.fabriblocks.quartz_wall": "Muret en quartz",
+	"block.fabriblocks.prismarine_brick_wall": "Muret en briques de prismarine",
+	"block.fabriblocks.dark_prismarine_wall": "Muret en prismarine sombre",
+	"block.fabriblocks.scute_block": "Bloc d'écailles de tortue"
+}

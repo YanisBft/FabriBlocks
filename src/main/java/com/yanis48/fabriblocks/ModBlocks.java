@@ -26,6 +26,7 @@ public class ModBlocks {
 	public static FBWall QUARTZ_WALL;
 	public static FBWall PRISMARINE_BRICK_WALL;
 	public static FBWall DARK_PRISMARINE_WALL;
+	public static FBWall PURPUR_WALL;
 	public static FBBlock SCUTE_BLOCK;
 	
 	public static void init() {
@@ -41,6 +42,7 @@ public class ModBlocks {
 		QUARTZ_WALL = new FBWall("quartz_wall", 2.0f, 30.0f);
 		PRISMARINE_BRICK_WALL = new FBWall("prismarine_brick_wall", 2.0f, 30.0f);
 		DARK_PRISMARINE_WALL = new FBWall("dark_prismarine_wall", 2.0f, 30.0f);
+		PURPUR_WALL = new FBWall("purpur_wall", 2.0f, 30.0f);
 		SCUTE_BLOCK = new FBBlock("scute_block", 2.0f, 30.0f);
 	}
 

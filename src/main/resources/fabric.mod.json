@@ -6,8 +6,5 @@
   "side": "universal",
   "initializers": [
     "com.yanis48.fabriblocks.FabriBlocks"
-  ],
-  "requires": {
-    "fabric": "*"
-  }
+  ]
 }

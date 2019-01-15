@@ -20,6 +20,8 @@ public class ModBlocks {
 	public static FBWall SNOW_BRICK_WALL;
 	public static FBWall STONE_WALL;
 	public static FBWall SMOOTH_STONE_WALL;
+	public static FBWall SMOOTH_SANDSTONE_WALL;
+	public static FBWall SMOOTH_RED_SANDSTONE_WALL;
 	public static FBWall POLISHED_GRANITE_WALL;
 	public static FBWall POLISHED_DIORITE_WALL;
 	public static FBWall POLISHED_ANDESITE_WALL;
@@ -36,6 +38,8 @@ public class ModBlocks {
 		SNOW_BRICK_WALL = new FBWall("snow_brick_wall", 2.0f, 30.0f);
 		STONE_WALL = new FBWall("stone_wall", 2.0f, 30.0f);
 		SMOOTH_STONE_WALL = new FBWall("smooth_stone_wall", 2.0f, 30.0f);
+		SMOOTH_SANDSTONE_WALL = new FBWall("smooth_sandstone_wall", 2.0f, 30.0f);
+		SMOOTH_RED_SANDSTONE_WALL = new FBWall("smooth_red_sandstone_wall", 2.0f, 30.0f);
 		POLISHED_GRANITE_WALL = new FBWall("polished_granite_wall", 2.0f, 30.0f);
 		POLISHED_DIORITE_WALL = new FBWall("polished_diorite_wall", 2.0f, 30.0f);
 		POLISHED_ANDESITE_WALL = new FBWall("polished_andesite_wall", 2.0f, 30.0f);

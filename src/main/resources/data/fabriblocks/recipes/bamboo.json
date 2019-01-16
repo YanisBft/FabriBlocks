@@ -1,0 +1,12 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "fabriblocks:bamboo_block"
+    }
+  ],
+  "result": {
+    "item": "minecraft:bamboo",
+    "count": 9
+  }
+}

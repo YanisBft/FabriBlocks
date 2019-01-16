@@ -1,4 +1,6 @@
 {
+	"block.fabriblocks.scute_block": "Scute Block",
+	"block.fabriblocks.bamboo_block": "Bamboo Block",
 	"block.fabriblocks.snow_bricks": "Snow Bricks",
 	"block.fabriblocks.snow_brick_stairs": "Snow Brick Stairs",
 	"block.fabriblocks.snow_brick_slab": "Snow Brick Slab",
@@ -13,6 +15,5 @@
 	"block.fabriblocks.quartz_wall": "Quartz Wall",
 	"block.fabriblocks.prismarine_brick_wall": "Prismarine Brick Wall",
 	"block.fabriblocks.dark_prismarine_wall": "Dark Prismarine Wall",
-	"block.fabriblocks.purpur_wall": "Purpur Wall",
-	"block.fabriblocks.scute_block": "Scute Block"
+	"block.fabriblocks.purpur_wall": "Purpur Wall"
 }

@@ -1,4 +1,6 @@
 {
+	"block.fabriblocks.scute_block": "Bloc d'écailles de tortue",
+	"block.fabriblocks.bamboo_block": "Bloc de bambou",
 	"block.fabriblocks.snow_bricks": "Briques de neige",
 	"block.fabriblocks.snow_brick_stairs": "Escalier en briques de neige",
 	"block.fabriblocks.snow_brick_slab": "Dalle en briques de neige",
@@ -13,6 +15,5 @@
 	"block.fabriblocks.quartz_wall": "Muret en quartz",
 	"block.fabriblocks.prismarine_brick_wall": "Muret en briques de prismarine",
 	"block.fabriblocks.dark_prismarine_wall": "Muret en prismarine sombre",
-	"block.fabriblocks.purpur_wall": "Muret en purpur",
-	"block.fabriblocks.scute_block": "Bloc d'écailles de tortue"
+	"block.fabriblocks.purpur_wall": "Muret en purpur"
 }

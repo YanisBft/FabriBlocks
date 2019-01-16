@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.yanis48.fabriblocks.blocks.FBBlock;
+import com.yanis48.fabriblocks.blocks.FBBlockColumn;
 import com.yanis48.fabriblocks.blocks.FBSlab;
 import com.yanis48.fabriblocks.blocks.FBStairs;
 import com.yanis48.fabriblocks.blocks.FBWall;
@@ -14,6 +15,8 @@ public class ModBlocks {
 	
 	public static List<Block> BLOCKS = new ArrayList<>();
 	
+	public static FBBlock SCUTE_BLOCK;
+	public static FBBlockColumn BAMBOO_BLOCK;
 	public static FBBlock SNOW_BRICKS;
 	public static FBStairs SNOW_BRICK_STAIRS;
 	public static FBSlab SNOW_BRICK_SLAB;
@@ -29,9 +32,10 @@ public class ModBlocks {
 	public static FBWall PRISMARINE_BRICK_WALL;
 	public static FBWall DARK_PRISMARINE_WALL;
 	public static FBWall PURPUR_WALL;
-	public static FBBlock SCUTE_BLOCK;
 	
 	public static void init() {
+		SCUTE_BLOCK = new FBBlock("scute_block", 1.0f, 5.0f);
+		BAMBOO_BLOCK = new FBBlockColumn("bamboo_block", 1.0f, 5.0f);
 		SNOW_BRICKS = new FBBlock("snow_bricks", 1.5f, 30.0f);
 		SNOW_BRICK_STAIRS = new FBStairs(SNOW_BRICKS.getDefaultState(), "snow_brick_stairs", 1.5f, 30.0f);
 		SNOW_BRICK_SLAB = new FBSlab("snow_brick_slab", 1.5f, 30.0f);
@@ -47,7 +51,6 @@ public class ModBlocks {
 		PRISMARINE_BRICK_WALL = new FBWall("prismarine_brick_wall", 1.5f, 30.0f);
 		DARK_PRISMARINE_WALL = new FBWall("dark_prismarine_wall", 1.5f, 30.0f);
 		PURPUR_WALL = new FBWall("purpur_wall", 1.5f, 30.0f);
-		SCUTE_BLOCK = new FBBlock("scute_block", 1.0f, 5.0f);
 	}
 
 }

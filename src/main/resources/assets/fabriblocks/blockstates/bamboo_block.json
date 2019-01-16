@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y": { "model": "fabriblocks:block/bamboo_block" },
+        "axis=z": { "model": "fabriblocks:block/bamboo_block", "x": 90 },
+        "axis=x": { "model": "fabriblocks:block/bamboo_block", "x": 90, "y": 90 }
+    }
+}

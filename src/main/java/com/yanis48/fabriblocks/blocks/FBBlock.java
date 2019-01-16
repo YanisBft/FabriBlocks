@@ -2,6 +2,7 @@ package com.yanis48.fabriblocks.blocks;
 
 import com.yanis48.fabriblocks.FabriBlocks;
 
+import net.fabricmc.fabric.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.item.Item;
@@ -13,7 +14,7 @@ import net.minecraft.util.registry.Registry;
 public class FBBlock extends Block {
 
 	public FBBlock(String name, float hardness, float resistance) {
-		super(Block.Settings.of(Material.STONE).strength(hardness, resistance));
+		super(FabricBlockSettings.of(Material.STONE).strength(hardness, resistance).build());
 		Registry.BLOCK.register(new Identifier(FabriBlocks.MOD_ID, name), this);
 		Registry.ITEM.register(new Identifier(FabriBlocks.MOD_ID, name), new BlockItem(this, new Item.Settings().stackSize(64).itemGroup(ItemGroup.BUILDING_BLOCKS)));
 	}

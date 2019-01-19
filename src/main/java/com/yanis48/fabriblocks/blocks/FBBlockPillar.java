@@ -12,9 +12,9 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class FBBlockColumn extends PillarBlock {
+public class FBBlockPillar extends PillarBlock {
 	
-	public FBBlockColumn(String name, float hardness, float resistance) {
+	public FBBlockPillar(String name, float hardness, float resistance) {
 		super(FabricBlockSettings.of(Material.BAMBOO).sounds(BlockSoundGroup.BAMBOO_SAPLING).strength(hardness, resistance).build());
 		Registry.BLOCK.register(new Identifier(FabriBlocks.MOD_ID, name), this);
 		Registry.ITEM.register(new Identifier(FabriBlocks.MOD_ID, name), new BlockItem(this, new Item.Settings().stackSize(64).itemGroup(ItemGroup.BUILDING_BLOCKS)));

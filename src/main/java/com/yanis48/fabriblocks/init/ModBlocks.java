@@ -10,6 +10,7 @@ public class ModBlocks {
 	
 	public static FBBlock SCUTE_BLOCK;
 	public static FBBlockPillar BAMBOO_BLOCK;
+	public static FBBlock MOSSY_BRICKS;
 	public static FBBlock SNOW_BRICKS;
 	public static FBStairs SNOW_BRICK_STAIRS;
 	public static FBSlab SNOW_BRICK_SLAB;
@@ -30,7 +31,9 @@ public class ModBlocks {
 		
 		SCUTE_BLOCK = new FBBlock("scute_block", 1.0f, 5.0f);
 		
-		BAMBOO_BLOCK = new FBBlockPillar("bamboo_block", 1.0f, 5.0f);
+		BAMBOO_BLOCK = new FBBlockPillar("bamboo_block", 0.5f, 2.5f);
+		
+		MOSSY_BRICKS = new FBBlock("mossy_bricks", 2.0f, 6.0f);
 		
 		SNOW_BRICKS = new FBBlock("snow_bricks", 1.5f, 30.0f);
 		SNOW_BRICK_STAIRS = new FBStairs(SNOW_BRICKS.getDefaultState(), "snow_brick_stairs", 1.5f, 30.0f);

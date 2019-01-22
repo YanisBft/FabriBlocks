@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "fabriblocks:block/mossy_bricks"
+    }
+}

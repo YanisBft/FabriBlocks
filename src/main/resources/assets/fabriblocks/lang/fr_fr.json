@@ -1,6 +1,9 @@
 {
 	"block.fabriblocks.scute_block": "Bloc d'écailles de tortue",
 	"block.fabriblocks.bamboo_block": "Bloc de bambou",
+	"block.fabriblocks.granite_tiling": "Carrelage de granite",
+	"block.fabriblocks.diorite_tiling": "Carrelage de diorite",
+	"block.fabriblocks.andesite_tiling": "Carrelage d'andésite",
 	"block.fabriblocks.mossy_bricks": "Briques moussues",
 	"block.fabriblocks.snow_bricks": "Briques de neige",
 	"block.fabriblocks.snow_brick_stairs": "Escalier en briques de neige",

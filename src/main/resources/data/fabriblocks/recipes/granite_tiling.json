@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GG",
+    "GG"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:polished_granite"
+    }
+  },
+  "result": {
+    "item": "fabriblocks:granite_tiling",
+    "count": 4
+  }
+}

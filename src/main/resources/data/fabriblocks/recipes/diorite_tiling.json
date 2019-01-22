@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DD",
+    "DD"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:polished_diorite"
+    }
+  },
+  "result": {
+    "item": "fabriblocks:diorite_tiling",
+    "count": 4
+  }
+}

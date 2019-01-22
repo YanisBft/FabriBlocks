@@ -23,13 +23,13 @@ bin/
 
 run/
 
-# yanis
-
 .mixin.out/
 crash-reports/
+logs/
+mods/
+resourcepacks/
+saves/
 screenshots/
 options.txt
 usercache.json
-saves/
-logs/
 *.launch

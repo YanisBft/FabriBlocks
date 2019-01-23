@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_top",
+    "textures": {
+        "bottom": "fabriblocks:block/glass_door_bottom",
+        "top": "fabriblocks:block/glass_door_top"
+    }
+}

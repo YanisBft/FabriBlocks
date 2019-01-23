@@ -2,6 +2,7 @@ package com.yanis48.fabriblocks.init;
 
 import com.yanis48.fabriblocks.blocks.FBBlock;
 import com.yanis48.fabriblocks.blocks.FBBlockPillar;
+import com.yanis48.fabriblocks.blocks.FBDoor;
 import com.yanis48.fabriblocks.blocks.FBSlab;
 import com.yanis48.fabriblocks.blocks.FBStairs;
 import com.yanis48.fabriblocks.blocks.FBWall;
@@ -29,6 +30,7 @@ public class ModBlocks {
 	public static FBWall PRISMARINE_BRICK_WALL;
 	public static FBWall DARK_PRISMARINE_WALL;
 	public static FBWall PURPUR_WALL;
+	public static FBDoor GLASS_DOOR;
 	
 	public static void init() {
 		
@@ -57,6 +59,8 @@ public class ModBlocks {
 		PRISMARINE_BRICK_WALL = new FBWall("prismarine_brick_wall", 1.5f, 30.0f);
 		DARK_PRISMARINE_WALL = new FBWall("dark_prismarine_wall", 1.5f, 30.0f);
 		PURPUR_WALL = new FBWall("purpur_wall", 1.5f, 30.0f);
+		
+		GLASS_DOOR = new FBDoor("glass_door", 0.3f, 1.5f);
 		
 	}
 

@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"SSS",
+		"LLL",
+		"SSS"
+	],
+	"key": {
+		"S": {
+			"item": "minecraft:sandstone"
+		},
+		"L": {
+			"item": "lapis_lazuli"
+		}
+	},
+	"result": {
+		"item": "fabriblocks:decorated_sandstone",
+		"count": 6
+	}
+}

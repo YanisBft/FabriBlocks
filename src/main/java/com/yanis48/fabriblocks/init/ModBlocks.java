@@ -14,6 +14,7 @@ public class ModBlocks {
 	public static FBBlock GRANITE_TILING;
 	public static FBBlock DIORITE_TILING;
 	public static FBBlock ANDESITE_TILING;
+	public static FBBlock DECORATED_SANDSTONE;
 	public static FBBlock MOSSY_BRICKS;
 	public static FBBlock SNOW_BRICKS;
 	public static FBStairs SNOW_BRICK_STAIRS;
@@ -41,6 +42,7 @@ public class ModBlocks {
 		GRANITE_TILING = new FBBlock("granite_tiling", 1.5f, 6.0f);
 		DIORITE_TILING = new FBBlock("diorite_tiling", 1.5f, 6.0f);
 		ANDESITE_TILING = new FBBlock("andesite_tiling", 1.5f, 6.0f);
+		DECORATED_SANDSTONE = new FBBlock("decorated_sandstone", 0.8f, 4.0f);
 		MOSSY_BRICKS = new FBBlock("mossy_bricks", 2.0f, 6.0f);
 		
 		SNOW_BRICKS = new FBBlock("snow_bricks", 1.5f, 30.0f);

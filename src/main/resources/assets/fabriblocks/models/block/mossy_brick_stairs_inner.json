@@ -1,0 +1,8 @@
+{
+    "parent": "block/inner_stairs",
+    "textures": {
+        "bottom": "fabriblocks:block/mossy_bricks",
+        "top": "fabriblocks:block/mossy_bricks",
+        "side": "fabriblocks:block/mossy_bricks"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "fabriblocks:block/mossy_brick_slab" },
+        "type=top": { "model": "fabriblocks:block/mossy_brick_slab_top" },
+        "type=double": { "model": "fabriblocks:block/mossy_bricks" }
+    }
+}

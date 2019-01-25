@@ -1,0 +1,17 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "fabriblocks:mossy_bricks"
+    }
+  },
+  "result": {
+    "item": "fabriblocks:mossy_brick_stairs",
+    "count": 4
+  }
+}

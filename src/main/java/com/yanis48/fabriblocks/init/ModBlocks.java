@@ -16,6 +16,9 @@ public class ModBlocks {
 	public static FBBlock ANDESITE_TILING;
 	public static FBBlock DECORATED_SANDSTONE;
 	public static FBBlock MOSSY_BRICKS;
+	public static FBStairs MOSSY_BRICK_STAIRS;
+	public static FBSlab MOSSY_BRICK_SLAB;
+	public static FBWall MOSSY_BRICK_WALL;
 	public static FBBlock SNOW_BRICKS;
 	public static FBStairs SNOW_BRICK_STAIRS;
 	public static FBSlab SNOW_BRICK_SLAB;
@@ -43,8 +46,11 @@ public class ModBlocks {
 		DIORITE_TILING = new FBBlock("diorite_tiling", 1.5f, 6.0f);
 		ANDESITE_TILING = new FBBlock("andesite_tiling", 1.5f, 6.0f);
 		DECORATED_SANDSTONE = new FBBlock("decorated_sandstone", 0.8f, 4.0f);
-		MOSSY_BRICKS = new FBBlock("mossy_bricks", 2.0f, 6.0f);
 		
+		MOSSY_BRICKS = new FBBlock("mossy_bricks", 2.0f, 6.0f);
+		MOSSY_BRICK_STAIRS = new FBStairs(MOSSY_BRICKS.getDefaultState(), "mossy_brick_stairs", 2.0f, 6.0f);
+		MOSSY_BRICK_SLAB = new FBSlab("mossy_brick_slab", 2.0f, 6.0f);
+		MOSSY_BRICK_WALL = new FBWall("mossy_brick_wall", 2.0f, 6.0f);
 		SNOW_BRICKS = new FBBlock("snow_bricks", 1.5f, 30.0f);
 		SNOW_BRICK_STAIRS = new FBStairs(SNOW_BRICKS.getDefaultState(), "snow_brick_stairs", 1.5f, 30.0f);
 		SNOW_BRICK_SLAB = new FBSlab("snow_brick_slab", 1.5f, 30.0f);
@@ -63,7 +69,6 @@ public class ModBlocks {
 		PURPUR_WALL = new FBWall("purpur_wall", 1.5f, 30.0f);
 		
 		GLASS_DOOR = new FBDoor("glass_door", 0.3f, 1.5f);
-		
 	}
 
 }

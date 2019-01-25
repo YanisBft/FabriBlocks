@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "fabriblocks:snow_bricks"
+  },
+  "result": "fabriblocks:snow_brick_wall",
+  "count": 1
+}

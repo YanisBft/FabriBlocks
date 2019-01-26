@@ -1,11 +1,11 @@
 package com.yanis48.fabriblocks.init;
 
-import com.yanis48.fabriblocks.blocks.FBBlock;
-import com.yanis48.fabriblocks.blocks.FBBlockPillar;
-import com.yanis48.fabriblocks.blocks.FBDoor;
-import com.yanis48.fabriblocks.blocks.FBSlab;
-import com.yanis48.fabriblocks.blocks.FBStairs;
-import com.yanis48.fabriblocks.blocks.FBWall;
+import com.yanis48.fabriblocks.block.FBBlock;
+import com.yanis48.fabriblocks.block.FBBlockPillar;
+import com.yanis48.fabriblocks.block.FBDoor;
+import com.yanis48.fabriblocks.block.FBSlab;
+import com.yanis48.fabriblocks.block.FBStairs;
+import com.yanis48.fabriblocks.block.FBWall;
 
 public class ModBlocks {
 	

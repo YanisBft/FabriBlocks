@@ -1,4 +1,4 @@
-package com.yanis48.fabriblocks.blocks;
+package com.yanis48.fabriblocks.block;
 
 import com.yanis48.fabriblocks.FabriBlocks;
 

@@ -2,7 +2,7 @@ package com.yanis48.fabriblocks.block;
 
 import com.yanis48.fabriblocks.FabriBlocks;
 
-import net.fabricmc.fabric.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.item.Item;

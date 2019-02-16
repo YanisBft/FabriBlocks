@@ -30,7 +30,7 @@ public class FBDoor extends DoorBlock {
 	public boolean activate(BlockState blockState, World world, BlockPos blockPos, PlayerEntity playerEntity, Hand hand, BlockHitResult blockHitResult) {
 		blockState = (BlockState)blockState.method_11572(OPEN);
 		world.setBlockState(blockPos, blockState, 10);
-		world.fireWorldEvent(playerEntity, (Boolean)blockState.get(OPEN) ? 1005 : 1011, blockPos, 0);
+		world.playEvent(playerEntity, (Boolean)blockState.get(OPEN) ? 1005 : 1011, blockPos, 0);
 		return true;
 	}
 

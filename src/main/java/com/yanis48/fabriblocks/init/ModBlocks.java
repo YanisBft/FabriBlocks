@@ -2,6 +2,7 @@ package com.yanis48.fabriblocks.init;
 
 import com.yanis48.fabriblocks.block.FBBlock;
 import com.yanis48.fabriblocks.block.FBBlockPillar;
+import com.yanis48.fabriblocks.block.FBBookshelf;
 import com.yanis48.fabriblocks.block.FBDoor;
 import com.yanis48.fabriblocks.block.FBFence;
 import com.yanis48.fabriblocks.block.FBLeafCarpet;
@@ -18,6 +19,11 @@ public class ModBlocks {
 	public static FBBlock DIORITE_TILING;
 	public static FBBlock ANDESITE_TILING;
 	public static FBBlock DECORATED_SANDSTONE;
+	public static FBBookshelf SPRUCE_BOOKSHELF;
+	public static FBBookshelf BIRCH_BOOKSHELF;
+	public static FBBookshelf JUNGLE_BOOKSHELF;
+	public static FBBookshelf ACACIA_BOOKSHELF;
+	public static FBBookshelf DARK_OAK_BOOKSHELF;
 	public static FBBlock MOSSY_BRICKS;
 	public static FBStairs MOSSY_BRICK_STAIRS;
 	public static FBSlab MOSSY_BRICK_SLAB;
@@ -62,6 +68,12 @@ public class ModBlocks {
 		DIORITE_TILING = new FBBlock("diorite_tiling", 1.5f, 6.0f);
 		ANDESITE_TILING = new FBBlock("andesite_tiling", 1.5f, 6.0f);
 		DECORATED_SANDSTONE = new FBBlock("decorated_sandstone", 0.8f, 4.0f);
+		
+		SPRUCE_BOOKSHELF = new FBBookshelf("spruce_bookshelf");
+		BIRCH_BOOKSHELF = new FBBookshelf("birch_bookshelf");
+		JUNGLE_BOOKSHELF = new FBBookshelf("jungle_bookshelf");
+		ACACIA_BOOKSHELF = new FBBookshelf("acacia_bookshelf");
+		DARK_OAK_BOOKSHELF = new FBBookshelf("dark_oak_bookshelf");
 		
 		MOSSY_BRICKS = new FBBlock("mossy_bricks", 2.0f, 6.0f);
 		MOSSY_BRICK_STAIRS = new FBStairs(MOSSY_BRICKS.getDefaultState(), "mossy_brick_stairs", 2.0f, 6.0f);

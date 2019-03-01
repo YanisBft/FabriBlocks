@@ -15,8 +15,8 @@ public class FBLectern extends LecternBlock {
 
 	public FBLectern(String name) {
 		super(FabricBlockSettings.of(Material.WOOD).strength(2.5f, 1.0f).build());
-		Registry.BLOCK.register(new Identifier(FabriBlocks.MOD_ID, name), this);
-		Registry.ITEM.register(new Identifier(FabriBlocks.MOD_ID, name), new BlockItem(this, new Item.Settings().stackSize(64).itemGroup(ItemGroup.REDSTONE)));
+		Registry.register(Registry.BLOCK, new Identifier(FabriBlocks.MOD_ID, name), this);
+		Registry.register(Registry.ITEM, new Identifier(FabriBlocks.MOD_ID, name), new BlockItem(this, new Item.Settings().stackSize(64).itemGroup(ItemGroup.REDSTONE)));
 	}
 
 }

@@ -16,8 +16,8 @@ public class FBBlockPillar extends PillarBlock {
 	
 	public FBBlockPillar(String name, float hardness, float resistance) {
 		super(FabricBlockSettings.of(Material.BAMBOO).sounds(BlockSoundGroup.BAMBOO_SAPLING).strength(hardness, resistance).build());
-		Registry.BLOCK.register(new Identifier(FabriBlocks.MOD_ID, name), this);
-		Registry.ITEM.register(new Identifier(FabriBlocks.MOD_ID, name), new BlockItem(this, new Item.Settings().stackSize(64).itemGroup(ItemGroup.BUILDING_BLOCKS)));
+		Registry.register(Registry.BLOCK, new Identifier(FabriBlocks.MOD_ID, name), this);
+		Registry.register(Registry.ITEM, new Identifier(FabriBlocks.MOD_ID, name), new BlockItem(this, new Item.Settings().stackSize(64).itemGroup(ItemGroup.BUILDING_BLOCKS)));
 	}
 
 }

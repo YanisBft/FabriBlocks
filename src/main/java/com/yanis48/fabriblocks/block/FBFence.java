@@ -16,8 +16,8 @@ public class FBFence extends FenceBlock {
 	
 	public FBFence(String name, float hardness, float resistance) {
 		super(FabricBlockSettings.of(Material.STONE, MaterialColor.NETHER).strength(hardness, resistance).build());
-		Registry.BLOCK.register(new Identifier(FabriBlocks.MOD_ID, name), this);
-		Registry.ITEM.register(new Identifier(FabriBlocks.MOD_ID, name), new BlockItem(this, new Item.Settings().stackSize(64).itemGroup(ItemGroup.DECORATIONS)));
+		Registry.register(Registry.BLOCK, new Identifier(FabriBlocks.MOD_ID, name), this);
+		Registry.register(Registry.ITEM, new Identifier(FabriBlocks.MOD_ID, name), new BlockItem(this, new Item.Settings().stackSize(64).itemGroup(ItemGroup.DECORATIONS)));
 	}
 
 }

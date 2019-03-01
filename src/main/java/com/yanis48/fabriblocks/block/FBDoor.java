@@ -22,8 +22,8 @@ public class FBDoor extends DoorBlock {
 	
 	public FBDoor(String name, float hardness, float resistance) {
 		super(FabricBlockSettings.of(Material.GLASS).sounds(BlockSoundGroup.GLASS).strength(hardness, resistance).build());
-		Registry.BLOCK.register(new Identifier(FabriBlocks.MOD_ID, name), this);
-		Registry.ITEM.register(new Identifier(FabriBlocks.MOD_ID, name), new BlockItem(this, new Item.Settings().stackSize(64).itemGroup(ItemGroup.REDSTONE)));
+		Registry.register(Registry.BLOCK, new Identifier(FabriBlocks.MOD_ID, name), this);
+		Registry.register(Registry.ITEM, new Identifier(FabriBlocks.MOD_ID, name), new BlockItem(this, new Item.Settings().stackSize(64).itemGroup(ItemGroup.REDSTONE)));
 	}
 	
 	@Override

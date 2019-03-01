@@ -11,7 +11,7 @@
 			"item": "minecraft:acacia_slab"
 		},
 		"B": {
-			"item": "minecraft:bookshelf"
+			"item": "fabriblocks:acacia_bookshelf"
 		}
 	},
 	"result": {

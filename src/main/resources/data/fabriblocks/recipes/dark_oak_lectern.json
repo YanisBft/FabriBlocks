@@ -11,7 +11,7 @@
 			"item": "minecraft:dark_oak_slab"
 		},
 		"B": {
-			"item": "minecraft:bookshelf"
+			"item": "fabriblocks:dark_oak_bookshelf"
 		}
 	},
 	"result": {

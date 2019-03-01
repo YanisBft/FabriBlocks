@@ -11,7 +11,7 @@
 			"item": "minecraft:jungle_slab"
 		},
 		"B": {
-			"item": "minecraft:bookshelf"
+			"item": "fabriblocks:jungle_bookshelf"
 		}
 	},
 	"result": {

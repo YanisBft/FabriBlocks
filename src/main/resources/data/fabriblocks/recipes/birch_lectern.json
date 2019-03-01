@@ -11,7 +11,7 @@
 			"item": "minecraft:birch_slab"
 		},
 		"B": {
-			"item": "minecraft:bookshelf"
+			"item": "fabriblocks:birch_bookshelf"
 		}
 	},
 	"result": {

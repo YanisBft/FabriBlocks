@@ -11,7 +11,7 @@
 			"item": "minecraft:spruce_slab"
 		},
 		"B": {
-			"item": "minecraft:bookshelf"
+			"item": "fabriblocks:spruce_bookshelf"
 		}
 	},
 	"result": {

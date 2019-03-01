@@ -2,8 +2,6 @@ package com.yanis48.fabriblocks.block;
 
 import com.yanis48.fabriblocks.FabriBlocks;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRenderLayer;
@@ -26,7 +24,6 @@ import net.minecraft.world.ViewableWorld;
 
 public class FBLeafCarpet extends Block {
 	public static final VoxelShape SHAPE = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 1.0D, 16.0D);
-	public static boolean translucentLeaves;
 	
 	public FBLeafCarpet(String name) {
 		super(FabricBlockSettings.of(Material.LEAVES).sounds(BlockSoundGroup.GRASS).strength(0.2f, 1.0f).build());
@@ -45,17 +42,12 @@ public class FBLeafCarpet extends Block {
 	public boolean canPlaceAt(BlockState blockState_1, ViewableWorld viewableWorld_1, BlockPos blockPos_1) {
 		return !viewableWorld_1.isAir(blockPos_1.down());
 	}
-	
-	@Environment(EnvType.CLIENT)
-	public static void setRenderingMode(boolean boolean_1) {
-		translucentLeaves = boolean_1;
-	}
 
 	public boolean isFullBoundsCubeForCulling(BlockState blockState_1) {
 		return false;
 	}
 
 	public BlockRenderLayer getRenderLayer() {
-		return translucentLeaves ? BlockRenderLayer.SOLID : BlockRenderLayer.TRANSLUCENT;
+		return BlockRenderLayer.TRANSLUCENT;
 	}
 }

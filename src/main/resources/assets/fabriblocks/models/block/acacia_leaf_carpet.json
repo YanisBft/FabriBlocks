@@ -1,0 +1,6 @@
+{
+    "parent": "fabriblocks:block/leaf_carpet",
+    "textures": {
+        "all": "block/acacia_leaves"
+    }
+}

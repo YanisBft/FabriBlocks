@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "leaf_carpet",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:birch_leaves"
+    }
+  },
+  "result": {
+    "item": "fabriblocks:birch_leaf_carpet",
+    "count": 3
+  }
+}

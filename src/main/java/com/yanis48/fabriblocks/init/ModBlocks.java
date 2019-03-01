@@ -4,6 +4,7 @@ import com.yanis48.fabriblocks.block.FBBlock;
 import com.yanis48.fabriblocks.block.FBBlockPillar;
 import com.yanis48.fabriblocks.block.FBDoor;
 import com.yanis48.fabriblocks.block.FBFence;
+import com.yanis48.fabriblocks.block.FBLeafCarpet;
 import com.yanis48.fabriblocks.block.FBLectern;
 import com.yanis48.fabriblocks.block.FBSlab;
 import com.yanis48.fabriblocks.block.FBStairs;
@@ -36,6 +37,12 @@ public class ModBlocks {
 	public static FBWall PRISMARINE_BRICK_WALL;
 	public static FBWall DARK_PRISMARINE_WALL;
 	public static FBWall PURPUR_WALL;
+	public static FBLeafCarpet OAK_LEAF_CARPET;
+	public static FBLeafCarpet SPRUCE_LEAF_CARPET;
+	public static FBLeafCarpet BIRCH_LEAF_CARPET;
+	public static FBLeafCarpet JUNGLE_LEAF_CARPET;
+	public static FBLeafCarpet ACACIA_LEAF_CARPET;
+	public static FBLeafCarpet DARK_OAK_LEAF_CARPET;
 	public static FBFence RED_NETHER_BRICK_FENCE;
 	public static FBLectern SPRUCE_LECTERN;
 	public static FBLectern BIRCH_LECTERN;
@@ -75,6 +82,13 @@ public class ModBlocks {
 		PRISMARINE_BRICK_WALL = new FBWall("prismarine_brick_wall", 1.5f, 30.0f);
 		DARK_PRISMARINE_WALL = new FBWall("dark_prismarine_wall", 1.5f, 30.0f);
 		PURPUR_WALL = new FBWall("purpur_wall", 1.5f, 30.0f);
+		
+		OAK_LEAF_CARPET = new FBLeafCarpet("oak_leaf_carpet");
+		SPRUCE_LEAF_CARPET = new FBLeafCarpet("spruce_leaf_carpet");
+		BIRCH_LEAF_CARPET = new FBLeafCarpet("birch_leaf_carpet");
+		JUNGLE_LEAF_CARPET = new FBLeafCarpet("jungle_leaf_carpet");
+		ACACIA_LEAF_CARPET = new FBLeafCarpet("acacia_leaf_carpet");
+		DARK_OAK_LEAF_CARPET = new FBLeafCarpet("dark_oak_leaf_carpet");
 		
 		RED_NETHER_BRICK_FENCE = new FBFence("red_nether_brick_fence", 2.0f, 6.0f);
 		

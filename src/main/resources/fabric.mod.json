@@ -5,7 +5,8 @@
 	"version": "1.0.3",
 	"side": "universal",
 	"initializers": [
-		"com.yanis48.fabriblocks.FabriBlocks"
+		"com.yanis48.fabriblocks.FabriBlocks",
+		"com.yanis48.fabriblocks.FabriBlocksClient"
 	],
 	"requires": {
 		"fabric": "*"

@@ -4,6 +4,7 @@ import com.yanis48.fabriblocks.block.FBBlock;
 import com.yanis48.fabriblocks.block.FBBlockPillar;
 import com.yanis48.fabriblocks.block.FBDoor;
 import com.yanis48.fabriblocks.block.FBFence;
+import com.yanis48.fabriblocks.block.FBLectern;
 import com.yanis48.fabriblocks.block.FBSlab;
 import com.yanis48.fabriblocks.block.FBStairs;
 import com.yanis48.fabriblocks.block.FBWall;
@@ -36,6 +37,11 @@ public class ModBlocks {
 	public static FBWall DARK_PRISMARINE_WALL;
 	public static FBWall PURPUR_WALL;
 	public static FBFence RED_NETHER_BRICK_FENCE;
+	public static FBLectern SPRUCE_LECTERN;
+	public static FBLectern BIRCH_LECTERN;
+	public static FBLectern JUNGLE_LECTERN;
+	public static FBLectern ACACIA_LECTERN;
+	public static FBLectern DARK_OAK_LECTERN;
 	public static FBDoor GLASS_DOOR;
 	
 	public static void init() {
@@ -71,6 +77,12 @@ public class ModBlocks {
 		PURPUR_WALL = new FBWall("purpur_wall", 1.5f, 30.0f);
 		
 		RED_NETHER_BRICK_FENCE = new FBFence("red_nether_brick_fence", 2.0f, 6.0f);
+		
+		SPRUCE_LECTERN = new FBLectern("spruce_lectern");
+		BIRCH_LECTERN = new FBLectern("birch_lectern");
+		JUNGLE_LECTERN = new FBLectern("jungle_lectern");
+		ACACIA_LECTERN = new FBLectern("acacia_lectern");
+		DARK_OAK_LECTERN = new FBLectern("dark_oak_lectern");
 		
 		GLASS_DOOR = new FBDoor("glass_door", 0.3f, 1.5f);
 	}

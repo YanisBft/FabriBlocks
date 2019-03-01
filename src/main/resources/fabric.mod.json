@@ -9,5 +9,8 @@
 	],
 	"requires": {
 		"fabric": "*"
+	},
+	"mixins": {
+		"common": "fabriblocks.common.json"
 	}
 }

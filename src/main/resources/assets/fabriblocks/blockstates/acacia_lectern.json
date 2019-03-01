@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "fabriblocks:block/acacia_lectern" },
+        "facing=south": { "model": "fabriblocks:block/acacia_lectern", "y": 180 },
+        "facing=west":  { "model": "fabriblocks:block/acacia_lectern", "y": 270 },
+        "facing=east":  { "model": "fabriblocks:block/acacia_lectern", "y": 90 }
+    }
+}

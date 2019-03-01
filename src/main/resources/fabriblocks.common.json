@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"package": "com.yanis48.fabriblocks.mixin",
+	"compatibilityLevel": "JAVA_8",
+	"mixins": [
+		"MixinWritableBookItem",
+		"MixinWrittenBookItem"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

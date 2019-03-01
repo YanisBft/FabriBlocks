@@ -25,5 +25,11 @@
 	"block.fabriblocks.dark_prismarine_wall": "Muret en prismarine sombre",
 	"block.fabriblocks.purpur_wall": "Muret en purpur",
 	"block.fabriblocks.red_nether_brick_fence": "Barrière en briques rouges du Nether",
+	"block.minecraft.lectern": "Pupitre en chêne",
+	"block.fabriblocks.spruce_lectern": "Pupitre en sapin",
+	"block.fabriblocks.birch_lectern": "Pupitre en bouleau",
+	"block.fabriblocks.jungle_lectern": "Pupitre en acajou",
+	"block.fabriblocks.acacia_lectern": "Pupitre en acacia",
+	"block.fabriblocks.dark_oak_lectern": "Pupitre en chêne noir",
 	"block.fabriblocks.glass_door": "Porte en verre"
 }

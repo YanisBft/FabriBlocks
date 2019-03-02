@@ -1,0 +1,11 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "minecraft:granite"
+		}
+	],
+	"result": {
+		"item": "fabriblocks:granite_button"
+	}
+}

@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "powered=false": { "model": "fabriblocks:block/andesite_pressure_plate" },
+        "powered=true": { "model": "fabriblocks:block/andesite_pressure_plate_down" }
+    }
+}

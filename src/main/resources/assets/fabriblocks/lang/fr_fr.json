@@ -48,6 +48,12 @@
 	"block.fabriblocks.jungle_lectern": "Pupitre en acajou",
 	"block.fabriblocks.acacia_lectern": "Pupitre en acacia",
 	"block.fabriblocks.dark_oak_lectern": "Pupitre en chêne noir",
+	"block.fabriblocks.granite_pressure_plate": "Plaque de pression en granite",
+	"block.fabriblocks.diorite_pressure_plate": "Plaque de pression en diorite",
+	"block.fabriblocks.andesite_pressure_plate": "Plaque de pression en andésite",
+	"block.fabriblocks.granite_button": "Bouton en granite",
+	"block.fabriblocks.diorite_button": "Bouton en diorite",
+	"block.fabriblocks.andesite_button": "Bouton en andésite",
 	"block.fabriblocks.bamboo_trapdoor": "Trappe en bambou",
 	"block.fabriblocks.bamboo_door": "Porte en bambou",
 	"block.fabriblocks.glass_door": "Porte en verre"

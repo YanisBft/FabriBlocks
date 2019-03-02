@@ -48,6 +48,12 @@
 	"block.fabriblocks.jungle_lectern": "Jungle Lectern",
 	"block.fabriblocks.acacia_lectern": "Acacia Lectern",
 	"block.fabriblocks.dark_oak_lectern": "Dark Oak Lectern",
+	"block.fabriblocks.granite_pressure_plate": "Granite Pressure Plate",
+	"block.fabriblocks.diorite_pressure_plate": "Diorite Pressure Plate",
+	"block.fabriblocks.andesite_pressure_plate": "Andesite Pressure Plate",
+	"block.fabriblocks.granite_button": "Granite Button",
+	"block.fabriblocks.diorite_button": "Diorite Button",
+	"block.fabriblocks.andesite_button": "Andesite Button",
 	"block.fabriblocks.bamboo_trapdoor": "Bamboo Trapdoor",
 	"block.fabriblocks.bamboo_door": "Bamboo Door",
 	"block.fabriblocks.glass_door": "Glass Door"

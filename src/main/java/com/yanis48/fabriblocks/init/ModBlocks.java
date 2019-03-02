@@ -3,10 +3,12 @@ package com.yanis48.fabriblocks.init;
 import com.yanis48.fabriblocks.block.FBBlock;
 import com.yanis48.fabriblocks.block.FBBlockPillar;
 import com.yanis48.fabriblocks.block.FBBookshelf;
+import com.yanis48.fabriblocks.block.FBButton;
 import com.yanis48.fabriblocks.block.FBDoor;
 import com.yanis48.fabriblocks.block.FBFence;
 import com.yanis48.fabriblocks.block.FBLeafCarpet;
 import com.yanis48.fabriblocks.block.FBLectern;
+import com.yanis48.fabriblocks.block.FBPressurePlate;
 import com.yanis48.fabriblocks.block.FBSlab;
 import com.yanis48.fabriblocks.block.FBStairs;
 import com.yanis48.fabriblocks.block.FBTrapdoor;
@@ -65,6 +67,12 @@ public class ModBlocks {
 	public static FBLectern JUNGLE_LECTERN;
 	public static FBLectern ACACIA_LECTERN;
 	public static FBLectern DARK_OAK_LECTERN;
+	public static FBPressurePlate GRANITE_PRESSURE_PLATE;
+	public static FBPressurePlate DIORITE_PRESSURE_PLATE;
+	public static FBPressurePlate ANDESITE_PRESSURE_PLATE;
+	public static FBButton GRANITE_BUTTON;
+	public static FBButton DIORITE_BUTTON;
+	public static FBButton ANDESITE_BUTTON;
 	public static FBTrapdoor BAMBOO_TRAPDOOR;
 	public static FBDoor BAMBOO_DOOR;
 	public static FBDoor GLASS_DOOR;
@@ -126,6 +134,13 @@ public class ModBlocks {
 		JUNGLE_LECTERN = new FBLectern("jungle_lectern");
 		ACACIA_LECTERN = new FBLectern("acacia_lectern");
 		DARK_OAK_LECTERN = new FBLectern("dark_oak_lectern");
+		
+		GRANITE_PRESSURE_PLATE = new FBPressurePlate("granite_pressure_plate");
+		DIORITE_PRESSURE_PLATE = new FBPressurePlate("diorite_pressure_plate");
+		ANDESITE_PRESSURE_PLATE = new FBPressurePlate("andesite_pressure_plate");
+		GRANITE_BUTTON = new FBButton("granite_button");
+		DIORITE_BUTTON = new FBButton("diorite_button");
+		ANDESITE_BUTTON = new FBButton("andesite_button");
 		
 		BAMBOO_TRAPDOOR = new FBTrapdoor("bamboo_trapdoor", Material.BAMBOO, BlockSoundGroup.BAMBOO_SAPLING, 0.5f, 2.5f);
 		BAMBOO_DOOR = new FBDoor("bamboo_door", Material.BAMBOO, BlockSoundGroup.BAMBOO_SAPLING, 0.5f, 2.5f);

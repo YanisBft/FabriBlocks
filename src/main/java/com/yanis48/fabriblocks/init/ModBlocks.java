@@ -12,6 +12,7 @@ import com.yanis48.fabriblocks.block.FBStairs;
 import com.yanis48.fabriblocks.block.FBTrapdoor;
 import com.yanis48.fabriblocks.block.FBWall;
 
+import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.sound.BlockSoundGroup;
 
@@ -40,6 +41,7 @@ public class ModBlocks {
 	public static FBSlab SNOW_BRICK_SLAB;
 	public static FBWall SNOW_BRICK_WALL;
 	public static FBWall STONE_WALL;
+	public static FBStairs SMOOTH_STONE_STAIRS;
 	public static FBWall SMOOTH_STONE_WALL;
 	public static FBWall SMOOTH_SANDSTONE_WALL;
 	public static FBWall SMOOTH_RED_SANDSTONE_WALL;
@@ -97,6 +99,7 @@ public class ModBlocks {
 		SNOW_BRICK_WALL = new FBWall("snow_brick_wall", 1.5f, 30.0f);
 		
 		STONE_WALL = new FBWall("stone_wall", 1.5f, 30.0f);
+		SMOOTH_STONE_STAIRS = new FBStairs(Blocks.SMOOTH_STONE.getDefaultState(), "smooth_stone_stairs", 1.5f, 30.0f);
 		SMOOTH_STONE_WALL = new FBWall("smooth_stone_wall", 1.5f, 30.0f);
 		SMOOTH_SANDSTONE_WALL = new FBWall("smooth_sandstone_wall", 0.8f, 4.0f);
 		SMOOTH_RED_SANDSTONE_WALL = new FBWall("smooth_red_sandstone_wall", 0.8f, 4.0f);

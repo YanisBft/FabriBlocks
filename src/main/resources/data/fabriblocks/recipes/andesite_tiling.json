@@ -1,16 +1,17 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "AA",
-    "AA"
-  ],
-  "key": {
-    "A": {
-      "item": "minecraft:polished_andesite"
-    }
-  },
-  "result": {
-    "item": "fabriblocks:andesite_tiling",
-    "count": 4
-  }
+	"type": "minecraft:crafting_shaped",
+	"group": "tilings",
+	"pattern": [
+		"AA",
+		"AA"
+	],
+	"key": {
+		"A": {
+			"item": "minecraft:polished_andesite"
+		}
+	},
+	"result": {
+		"item": "fabriblocks:andesite_tiling",
+		"count": 4
+	}
 }

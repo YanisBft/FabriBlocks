@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"GD",
+		"DG"
+	],
+	"key": {
+		"G": {
+			"item": "minecraft:polished_granite"
+		},
+		"D": {
+			"item": "minecraft:polished_diorite"
+		}
+	},
+	"result": {
+		"item": "fabriblocks:granite_diorite_tiling",
+		"count": 4
+	}
+}

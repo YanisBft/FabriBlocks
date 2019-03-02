@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"AG",
+		"GA"
+	],
+	"key": {
+		"A": {
+			"item": "minecraft:polished_andesite"
+		},
+		"G": {
+			"item": "minecraft:polished_granite"
+		}
+	},
+	"result": {
+		"item": "fabriblocks:andesite_granite_tiling",
+		"count": 4
+	}
+}

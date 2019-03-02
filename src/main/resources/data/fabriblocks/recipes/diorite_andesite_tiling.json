@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"DA",
+		"AD"
+	],
+	"key": {
+		"D": {
+			"item": "minecraft:polished_diorite"
+		},
+		"A": {
+			"item": "minecraft:polished_andesite"
+		}
+	},
+	"result": {
+		"item": "fabriblocks:diorite_andesite_tiling",
+		"count": 4
+	}
+}

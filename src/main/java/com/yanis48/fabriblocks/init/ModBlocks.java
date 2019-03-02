@@ -18,6 +18,9 @@ public class ModBlocks {
 	public static FBBlock GRANITE_TILING;
 	public static FBBlock DIORITE_TILING;
 	public static FBBlock ANDESITE_TILING;
+	public static FBBlock GRANITE_DIORITE_TILING;
+	public static FBBlock DIORITE_ANDESITE_TILING;
+	public static FBBlock ANDESITE_GRANITE_TILING;
 	public static FBBlock DECORATED_SANDSTONE;
 	public static FBBookshelf SPRUCE_BOOKSHELF;
 	public static FBBookshelf BIRCH_BOOKSHELF;
@@ -67,6 +70,9 @@ public class ModBlocks {
 		GRANITE_TILING = new FBBlock("granite_tiling", 1.5f, 6.0f);
 		DIORITE_TILING = new FBBlock("diorite_tiling", 1.5f, 6.0f);
 		ANDESITE_TILING = new FBBlock("andesite_tiling", 1.5f, 6.0f);
+		GRANITE_DIORITE_TILING = new FBBlock("granite_diorite_tiling", 1.5f, 6.0f);
+		DIORITE_ANDESITE_TILING = new FBBlock("diorite_andesite_tiling", 1.5f, 6.0f);
+		ANDESITE_GRANITE_TILING = new FBBlock("andesite_granite_tiling", 1.5f, 6.0f);
 		DECORATED_SANDSTONE = new FBBlock("decorated_sandstone", 0.8f, 4.0f);
 		
 		SPRUCE_BOOKSHELF = new FBBookshelf("spruce_bookshelf");

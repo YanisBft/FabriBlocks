@@ -9,7 +9,11 @@ import com.yanis48.fabriblocks.block.FBLeafCarpet;
 import com.yanis48.fabriblocks.block.FBLectern;
 import com.yanis48.fabriblocks.block.FBSlab;
 import com.yanis48.fabriblocks.block.FBStairs;
+import com.yanis48.fabriblocks.block.FBTrapdoor;
 import com.yanis48.fabriblocks.block.FBWall;
+
+import net.minecraft.block.Material;
+import net.minecraft.sound.BlockSoundGroup;
 
 public class ModBlocks {
 	
@@ -59,6 +63,8 @@ public class ModBlocks {
 	public static FBLectern JUNGLE_LECTERN;
 	public static FBLectern ACACIA_LECTERN;
 	public static FBLectern DARK_OAK_LECTERN;
+	public static FBTrapdoor BAMBOO_TRAPDOOR;
+	public static FBDoor BAMBOO_DOOR;
 	public static FBDoor GLASS_DOOR;
 	
 	public static void init() {
@@ -118,7 +124,9 @@ public class ModBlocks {
 		ACACIA_LECTERN = new FBLectern("acacia_lectern");
 		DARK_OAK_LECTERN = new FBLectern("dark_oak_lectern");
 		
-		GLASS_DOOR = new FBDoor("glass_door", 0.3f, 1.5f);
+		BAMBOO_TRAPDOOR = new FBTrapdoor("bamboo_trapdoor", Material.BAMBOO, BlockSoundGroup.BAMBOO_SAPLING, 0.5f, 2.5f);
+		BAMBOO_DOOR = new FBDoor("bamboo_door", Material.BAMBOO, BlockSoundGroup.BAMBOO_SAPLING, 0.5f, 2.5f);
+		GLASS_DOOR = new FBDoor("glass_door", Material.GLASS, BlockSoundGroup.GLASS, 0.3f, 1.5f);
 	}
 
 }

@@ -14,8 +14,8 @@ import net.minecraft.util.registry.Registry;
 
 public class FBBlockPillar extends PillarBlock {
 	
-	public FBBlockPillar(String name, float hardness, float resistance) {
-		super(FabricBlockSettings.of(Material.BAMBOO).sounds(BlockSoundGroup.BAMBOO_SAPLING).strength(hardness, resistance).build());
+	public FBBlockPillar(String name, Material material, BlockSoundGroup soundGroup, float hardness, float resistance) {
+		super(FabricBlockSettings.of(material).sounds(soundGroup).strength(hardness, resistance).build());
 		Registry.register(Registry.BLOCK, new Identifier(FabriBlocks.MOD_ID, name), this);
 		Registry.register(Registry.ITEM, new Identifier(FabriBlocks.MOD_ID, name), new BlockItem(this, new Item.Settings().stackSize(64).itemGroup(ItemGroup.BUILDING_BLOCKS)));
 	}

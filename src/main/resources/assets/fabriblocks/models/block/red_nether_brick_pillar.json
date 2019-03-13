@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "fabriblocks:block/red_nether_brick_pillar_top",
+        "side": "fabriblocks:block/red_nether_brick_pillar"
+    }
+}

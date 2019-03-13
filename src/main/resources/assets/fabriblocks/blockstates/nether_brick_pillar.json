@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y": { "model": "fabriblocks:block/nether_brick_pillar" },
+        "axis=z": { "model": "fabriblocks:block/nether_brick_pillar", "x": 90 },
+        "axis=x": { "model": "fabriblocks:block/nether_brick_pillar", "x": 90, "y": 90 }
+    }
+}

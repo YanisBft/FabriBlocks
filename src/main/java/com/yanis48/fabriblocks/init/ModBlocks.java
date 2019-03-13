@@ -29,6 +29,8 @@ public class ModBlocks {
 	public static FBBlock DIORITE_ANDESITE_TILING;
 	public static FBBlock ANDESITE_GRANITE_TILING;
 	public static FBBlock DECORATED_SANDSTONE;
+	public static FBBlockPillar NETHER_BRICK_PILLAR;
+	public static FBBlockPillar RED_NETHER_BRICK_PILLAR;
 	public static FBBookshelf SPRUCE_BOOKSHELF;
 	public static FBBookshelf BIRCH_BOOKSHELF;
 	public static FBBookshelf JUNGLE_BOOKSHELF;
@@ -81,7 +83,7 @@ public class ModBlocks {
 		
 		SCUTE_BLOCK = new FBBlock("scute_block", 1.0f, 5.0f);
 		
-		BAMBOO_BLOCK = new FBBlockPillar("bamboo_block", 0.5f, 2.5f);
+		BAMBOO_BLOCK = new FBBlockPillar("bamboo_block", Material.BAMBOO, BlockSoundGroup.BAMBOO_SAPLING, 0.5f, 2.5f);
 		
 		GRANITE_TILING = new FBBlock("granite_tiling", 1.5f, 6.0f);
 		DIORITE_TILING = new FBBlock("diorite_tiling", 1.5f, 6.0f);
@@ -90,6 +92,8 @@ public class ModBlocks {
 		DIORITE_ANDESITE_TILING = new FBBlock("diorite_andesite_tiling", 1.5f, 6.0f);
 		ANDESITE_GRANITE_TILING = new FBBlock("andesite_granite_tiling", 1.5f, 6.0f);
 		DECORATED_SANDSTONE = new FBBlock("decorated_sandstone", 0.8f, 4.0f);
+		NETHER_BRICK_PILLAR = new FBBlockPillar("nether_brick_pillar", Material.STONE, BlockSoundGroup.STONE, 2.0f, 6.0f);
+		RED_NETHER_BRICK_PILLAR = new FBBlockPillar("red_nether_brick_pillar", Material.STONE, BlockSoundGroup.STONE, 2.0f, 6.0f);
 		
 		SPRUCE_BOOKSHELF = new FBBookshelf("spruce_bookshelf");
 		BIRCH_BOOKSHELF = new FBBookshelf("birch_bookshelf");

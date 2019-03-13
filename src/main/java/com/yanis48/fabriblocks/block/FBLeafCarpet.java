@@ -8,6 +8,7 @@ import net.minecraft.block.BlockRenderLayer;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.VerticalEntityPosition;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -48,6 +49,6 @@ public class FBLeafCarpet extends Block {
 	}
 
 	public BlockRenderLayer getRenderLayer() {
-		return BlockRenderLayer.TRANSLUCENT;
+		return MinecraftClient.isFancyGraphicsEnabled() ? BlockRenderLayer.TRANSLUCENT : BlockRenderLayer.SOLID;
 	}
 }

@@ -17,6 +17,9 @@ public class FabriBlocks implements ModInitializer {
 		
 		FuelRegistry.INSTANCE.add(ModItemTags.BOOKSHELVES, 300);
 		FuelRegistry.INSTANCE.add(ModItemTags.LECTERNS, 300);
+		FuelRegistry.INSTANCE.add(ModBlocks.BAMBOO_BLOCK, 300);
+		FuelRegistry.INSTANCE.add(ModBlocks.BAMBOO_TRAPDOOR, 300);
+		FuelRegistry.INSTANCE.add(ModBlocks.BAMBOO_DOOR, 200);
 		
 		CompostingChanceRegistry.INSTANCE.add(ModBlocks.OAK_LEAF_CARPET, 0.1f);
 		CompostingChanceRegistry.INSTANCE.add(ModBlocks.SPRUCE_LEAF_CARPET, 0.1f);

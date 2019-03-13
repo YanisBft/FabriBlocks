@@ -1,0 +1,11 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:bookshelf",
+		"fabriblocks:spruce_bookshelf",
+		"fabriblocks:birch_bookshelf",
+		"fabriblocks:jungle_bookshelf",
+		"fabriblocks:acacia_bookshelf",
+		"fabriblocks:dark_oak_bookshelf"
+	]
+}

@@ -7,11 +7,11 @@ import net.minecraft.block.Block;
 import net.minecraft.tag.Tag;
 import net.minecraft.util.Identifier;
 
-public class ModTags {
+public class ModBlockTags {
 	
-	public static final Tag<Block> LECTERNS = registerBlockTag("lecterns");
+	public static final Tag<Block> LECTERNS = register("lecterns");
 	
-	public static Tag<Block> registerBlockTag(String id) {
+	public static Tag<Block> register(String id) {
 		return TagRegistry.block(new Identifier(FabriBlocks.MOD_ID, id));
 	}
 }

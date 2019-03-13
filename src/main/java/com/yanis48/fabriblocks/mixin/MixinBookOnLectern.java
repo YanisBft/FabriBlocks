@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import com.yanis48.fabriblocks.block.FBLectern;
-import com.yanis48.fabriblocks.init.ModTags;
+import com.yanis48.fabriblocks.init.ModBlockTags;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.item.ItemUsageContext;
@@ -24,7 +24,7 @@ public abstract class MixinBookOnLectern {
 		World world_1 = itemUsageContext_1.getWorld();
 		BlockPos blockPos_1 = itemUsageContext_1.getBlockPos();
 		BlockState blockState_1 = world_1.getBlockState(blockPos_1);
-		if (blockState_1.getBlock().matches(ModTags.LECTERNS)) {
+		if (blockState_1.getBlock().matches(ModBlockTags.LECTERNS)) {
 			cir.setReturnValue(FBLectern.putBookIfAbsent(world_1, blockPos_1, blockState_1, itemUsageContext_1.getItemStack()) ? ActionResult.SUCCESS : ActionResult.PASS);
 		} else {
 			cir.setReturnValue(ActionResult.PASS);

@@ -1,0 +1,11 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:lectern",
+		"fabriblocks:spruce_lectern",
+		"fabriblocks:birch_lectern",
+		"fabriblocks:jungle_lectern",
+		"fabriblocks:acacia_lectern",
+		"fabriblocks:dark_oak_lectern"
+	]
+}

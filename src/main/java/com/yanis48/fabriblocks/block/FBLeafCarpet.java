@@ -27,7 +27,7 @@ public class FBLeafCarpet extends Block {
 	public static final VoxelShape SHAPE = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 1.0D, 16.0D);
 	
 	public FBLeafCarpet(String name) {
-		super(FabricBlockSettings.of(Material.LEAVES).sounds(BlockSoundGroup.GRASS).strength(0.2f, 1.0f).build());
+		super(FabricBlockSettings.of(Material.LEAVES).sounds(BlockSoundGroup.GRASS).strength(0.2f, 1.0f).noCollision().build());
 		Registry.register(Registry.BLOCK, new Identifier(FabriBlocks.MOD_ID, name), this);
 		Registry.register(Registry.ITEM, new Identifier(FabriBlocks.MOD_ID, name), new BlockItem(this, new Item.Settings().stackSize(64).itemGroup(ItemGroup.DECORATIONS)));
 	}

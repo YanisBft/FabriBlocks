@@ -2,7 +2,7 @@
 	"id": "fabriblocks",
 	"name": "FabriBlocks",
 	"description": "A 1.14 mod that adds building and decorative blocks",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"side": "universal",
 	"initializers": [
 		"com.yanis48.fabriblocks.FabriBlocks",

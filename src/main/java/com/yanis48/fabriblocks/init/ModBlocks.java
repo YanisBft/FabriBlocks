@@ -43,6 +43,8 @@ public class ModBlocks {
 	public static FBStairs SNOW_BRICK_STAIRS;
 	public static FBSlab SNOW_BRICK_SLAB;
 	public static FBStairs SMOOTH_STONE_STAIRS;
+	public static FBStairs CUT_SANDSTONE_STAIRS;
+	public static FBStairs CUT_RED_SANDSTONE_STAIRS;
 	public static FBLeafCarpet OAK_LEAF_CARPET;
 	public static FBLeafCarpet SPRUCE_LEAF_CARPET;
 	public static FBLeafCarpet BIRCH_LEAF_CARPET;
@@ -108,6 +110,8 @@ public class ModBlocks {
 		SNOW_BRICK_STAIRS = new FBStairs(SNOW_BRICKS.getDefaultState(), "snow_brick_stairs", 1.5f, 30.0f);
 		SNOW_BRICK_SLAB = new FBSlab("snow_brick_slab", 1.5f, 30.0f);
 		SMOOTH_STONE_STAIRS = new FBStairs(Blocks.SMOOTH_STONE.getDefaultState(), "smooth_stone_stairs", 1.5f, 30.0f);
+		CUT_SANDSTONE_STAIRS = new FBStairs(Blocks.CUT_SANDSTONE.getDefaultState(), "cut_sandstone_stairs", 0.8f, 4.0f);
+		CUT_RED_SANDSTONE_STAIRS = new FBStairs(Blocks.CUT_RED_SANDSTONE.getDefaultState(), "cut_red_sandstone_stairs", 0.8f, 4.0f);
 		
 		OAK_LEAF_CARPET = new FBLeafCarpet("oak_leaf_carpet");
 		SPRUCE_LEAF_CARPET = new FBLeafCarpet("spruce_leaf_carpet");

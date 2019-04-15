@@ -5,6 +5,7 @@
 	"mixins": [
 		"MixinBookOnLectern"
 	],
+	"minVersion": "0.7.11",
 	"injectors": {
 		"defaultRequire": 1
 	}

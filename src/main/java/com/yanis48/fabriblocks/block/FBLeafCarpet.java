@@ -25,7 +25,7 @@ import net.minecraft.world.IWorld;
 import net.minecraft.world.ViewableWorld;
 
 public class FBLeafCarpet extends Block {
-	public static final VoxelShape SHAPE = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 1.0D, 16.0D);
+	private static final VoxelShape SHAPE = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 1.0D, 16.0D);
 	
 	public FBLeafCarpet(String name) {
 		super(FabricBlockSettings.of(Material.PART, MaterialColor.FOLIAGE).sounds(BlockSoundGroup.GRASS).strength(0.2f, 1.0f).noCollision().build());

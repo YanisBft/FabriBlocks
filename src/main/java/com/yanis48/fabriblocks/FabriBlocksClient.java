@@ -23,7 +23,7 @@ public class FabriBlocksClient implements ClientModInitializer {
 		
 	}
 	
-	public void registerBlockColor(Block block, Block templateBlock) {
+	private void registerBlockColor(Block block, Block templateBlock) {
 		ColorProviderRegistry.BLOCK.register((block1, pos, world, layer) -> {
 			BlockColorMapper provider = ColorProviderRegistry.BLOCK.get(templateBlock);
 			return provider == null ? -1 : provider.getColor(block1, pos, world, layer);

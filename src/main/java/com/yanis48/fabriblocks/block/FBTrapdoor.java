@@ -30,9 +30,9 @@ public class FBTrapdoor extends TrapdoorBlock {
 	
 	@Override
 	public boolean activate(BlockState blockState, World world, BlockPos blockPos, PlayerEntity playerEntity, Hand hand, BlockHitResult blockHitResult) {
-		blockState = (BlockState)blockState.method_11572(OPEN);
+		blockState = blockState.method_11572(OPEN);
 		world.setBlockState(blockPos, blockState, 10);
-		world.playSound(playerEntity, blockPos, (Boolean)blockState.get(OPEN) ? SoundEvents.BLOCK_BAMBOO_BREAK : SoundEvents.BLOCK_BAMBOO_PLACE, SoundCategory.BLOCK, 1.0F, world.random.nextFloat() * 0.1F + 0.9F);
+		world.playSound(playerEntity, blockPos, blockState.get(OPEN) ? SoundEvents.BLOCK_BAMBOO_BREAK : SoundEvents.BLOCK_BAMBOO_PLACE, SoundCategory.BLOCKS, 1.0F, world.random.nextFloat() * 0.1F + 0.9F);
 		return true;
 	}
 }

@@ -30,12 +30,12 @@ public class FBDoor extends DoorBlock {
 	
 	@Override
 	public boolean activate(BlockState blockState, World world, BlockPos blockPos, PlayerEntity playerEntity, Hand hand, BlockHitResult blockHitResult) {
-		blockState = (BlockState)blockState.method_11572(OPEN);
+		blockState = blockState.method_11572(OPEN);
 		world.setBlockState(blockPos, blockState, 10);
 		if (this.material == Material.BAMBOO) {
-			world.playSound(playerEntity, blockPos, (Boolean)blockState.get(OPEN) ? SoundEvents.BLOCK_BAMBOO_BREAK : SoundEvents.BLOCK_BAMBOO_PLACE, SoundCategory.BLOCK, 1.0F, world.random.nextFloat() * 0.1F + 0.9F);
+			world.playSound(playerEntity, blockPos, blockState.get(OPEN) ? SoundEvents.BLOCK_BAMBOO_BREAK : SoundEvents.BLOCK_BAMBOO_PLACE, SoundCategory.BLOCKS, 1.0F, world.random.nextFloat() * 0.1F + 0.9F);
 		} else {
-			world.playEvent(playerEntity, (Boolean)blockState.get(OPEN) ? 1011 : 1005, blockPos, 0);
+			world.playLevelEvent(playerEntity, blockState.get(OPEN) ? 1011 : 1005, blockPos, 0);
 		}
 		return true;
 	}

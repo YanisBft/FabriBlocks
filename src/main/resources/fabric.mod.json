@@ -1,17 +1,23 @@
 {
+	"schemaVersion": 1,
 	"id": "fabriblocks",
 	"name": "FabriBlocks",
 	"description": "A 1.14 mod that adds building and decorative blocks",
-	"version": "1.1.2",
+	"version": "1.1.3",
 	"side": "universal",
-	"initializers": [
-		"com.yanis48.fabriblocks.FabriBlocks",
-		"com.yanis48.fabriblocks.FabriBlocksClient"
-	],
-	"requires": {
-		"fabric": "*"
+	"entrypoints": {
+		"main": [
+			"com.yanis48.fabriblocks.FabriBlocks"
+		],
+		"client": [
+			"com.yanis48.fabriblocks.FabriBlocksClient"
+		]
 	},
-	"mixins": {
-		"common": "fabriblocks.common.json"
-	}
+	"requires": {
+		"fabric": "*",
+		"fabricloader": ">=0.4.1"
+	},
+	"mixins": [
+		"fabriblocks.mixins.json"
+	]
 }

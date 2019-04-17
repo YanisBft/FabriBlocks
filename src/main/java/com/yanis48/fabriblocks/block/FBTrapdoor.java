@@ -9,7 +9,7 @@ import net.minecraft.block.TrapdoorBlock;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.block.BlockItem;
+import net.minecraft.item.BlockItem;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -30,7 +30,7 @@ public class FBTrapdoor extends TrapdoorBlock {
 	
 	@Override
 	public boolean activate(BlockState blockState, World world, BlockPos blockPos, PlayerEntity playerEntity, Hand hand, BlockHitResult blockHitResult) {
-		blockState = blockState.method_11572(OPEN);
+		blockState = blockState.cycle(OPEN);
 		world.setBlockState(blockPos, blockState, 10);
 		world.playSound(playerEntity, blockPos, blockState.get(OPEN) ? SoundEvents.BLOCK_BAMBOO_BREAK : SoundEvents.BLOCK_BAMBOO_PLACE, SoundCategory.BLOCKS, 1.0F, world.random.nextFloat() * 0.1F + 0.9F);
 		return true;

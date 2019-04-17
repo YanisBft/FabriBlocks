@@ -25,6 +25,7 @@ public class FabriBlocks implements ModInitializer {
 		
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlockTags.LEAF_CARPETS, 60, 100);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlockTags.BOOKSHELVES, 30, 20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlockTags.LECTERNS, 30, 20);
 		
 		CompostingChanceRegistry.INSTANCE.add(ModBlocks.OAK_LEAF_CARPET, 0.1f);
 		CompostingChanceRegistry.INSTANCE.add(ModBlocks.SPRUCE_LEAF_CARPET, 0.1f);

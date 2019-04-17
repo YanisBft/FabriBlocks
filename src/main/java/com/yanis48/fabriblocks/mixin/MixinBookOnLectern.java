@@ -20,7 +20,7 @@ import net.minecraft.world.World;
 public abstract class MixinBookOnLectern {
 	
 	@Inject(method = "useOnBlock", at = @At(value = "HEAD"), cancellable = true)
-	private void useOnBlock(ItemUsageContext itemUsageContext_1, CallbackInfoReturnable<ActionResult> cir) {
+	public void useOnBlock(ItemUsageContext itemUsageContext_1, CallbackInfoReturnable<ActionResult> cir) {
 		World world_1 = itemUsageContext_1.getWorld();
 		BlockPos blockPos_1 = itemUsageContext_1.getBlockPos();
 		BlockState blockState_1 = world_1.getBlockState(blockPos_1);

@@ -1,0 +1,15 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "###"
+    ],
+        "key": {
+        "#": {
+            "item": "minecraft:cracked_stone_bricks"
+        }
+    },
+    "result": {
+        "item": "fabriblocks:cracked_stone_brick_slab",
+        "count": 6
+    }
+}

@@ -20,139 +20,79 @@ import net.minecraft.sound.BlockSoundGroup;
 
 public class ModBlocks {
 	
-	public static FBBlock SCUTE_BLOCK;
-	public static FBBlockPillar BAMBOO_BLOCK;
-	public static FBBlock GRANITE_TILING;
-	public static FBBlock DIORITE_TILING;
-	public static FBBlock ANDESITE_TILING;
-	public static FBBlock GRANITE_DIORITE_TILING;
-	public static FBBlock DIORITE_ANDESITE_TILING;
-	public static FBBlock ANDESITE_GRANITE_TILING;
-	public static FBBlock DECORATED_SANDSTONE;
-	public static FBBlockPillar NETHER_BRICK_PILLAR;
-	public static FBBlockPillar RED_NETHER_BRICK_PILLAR;
-	public static FBBookshelf SPRUCE_BOOKSHELF;
-	public static FBBookshelf BIRCH_BOOKSHELF;
-	public static FBBookshelf JUNGLE_BOOKSHELF;
-	public static FBBookshelf ACACIA_BOOKSHELF;
-	public static FBBookshelf DARK_OAK_BOOKSHELF;
-	public static FBBlock MOSSY_BRICKS;
-	public static FBStairs MOSSY_BRICK_STAIRS;
-	public static FBSlab MOSSY_BRICK_SLAB;
-	public static FBBlock SNOW_BRICKS;
-	public static FBStairs SNOW_BRICK_STAIRS;
-	public static FBSlab SNOW_BRICK_SLAB;
-	public static FBStairs SMOOTH_STONE_STAIRS;
-	public static FBStairs CUT_SANDSTONE_STAIRS;
-	public static FBStairs CUT_RED_SANDSTONE_STAIRS;
-	public static FBLeafCarpet OAK_LEAF_CARPET;
-	public static FBLeafCarpet SPRUCE_LEAF_CARPET;
-	public static FBLeafCarpet BIRCH_LEAF_CARPET;
-	public static FBLeafCarpet JUNGLE_LEAF_CARPET;
-	public static FBLeafCarpet ACACIA_LEAF_CARPET;
-	public static FBLeafCarpet DARK_OAK_LEAF_CARPET;
-	public static FBFence RED_NETHER_BRICK_FENCE;
-	public static FBWall STONE_WALL;
-	public static FBWall SMOOTH_STONE_WALL;
-	public static FBWall SMOOTH_SANDSTONE_WALL;
-	public static FBWall SMOOTH_RED_SANDSTONE_WALL;
-	public static FBWall SMOOTH_QUARTZ_WALL;
-	public static FBWall POLISHED_GRANITE_WALL;
-	public static FBWall POLISHED_DIORITE_WALL;
-	public static FBWall POLISHED_ANDESITE_WALL;
-	public static FBWall QUARTZ_WALL;
-	public static FBWall PRISMARINE_BRICK_WALL;
-	public static FBWall DARK_PRISMARINE_WALL;
-	public static FBWall PURPUR_WALL;
-	public static FBWall MOSSY_BRICK_WALL;
-	public static FBWall SNOW_BRICK_WALL;
-	public static FBLectern SPRUCE_LECTERN;
-	public static FBLectern BIRCH_LECTERN;
-	public static FBLectern JUNGLE_LECTERN;
-	public static FBLectern ACACIA_LECTERN;
-	public static FBLectern DARK_OAK_LECTERN;
-	public static FBPressurePlate GRANITE_PRESSURE_PLATE;
-	public static FBPressurePlate DIORITE_PRESSURE_PLATE;
-	public static FBPressurePlate ANDESITE_PRESSURE_PLATE;
-	public static FBButton GRANITE_BUTTON;
-	public static FBButton DIORITE_BUTTON;
-	public static FBButton ANDESITE_BUTTON;
-	public static FBTrapdoor BAMBOO_TRAPDOOR;
-	public static FBDoor BAMBOO_DOOR;
-	public static FBDoor GLASS_DOOR;
+	public static final FBBlock SCUTE_BLOCK = new FBBlock("scute_block", 1.0f, 5.0f);
 	
-	public static void init() {
-		
-		SCUTE_BLOCK = new FBBlock("scute_block", 1.0f, 5.0f);
-		
-		BAMBOO_BLOCK = new FBBlockPillar("bamboo_block", Material.BAMBOO, BlockSoundGroup.BAMBOO_SAPLING, 0.5f, 2.5f);
-		
-		GRANITE_TILING = new FBBlock("granite_tiling", 1.5f, 6.0f);
-		DIORITE_TILING = new FBBlock("diorite_tiling", 1.5f, 6.0f);
-		ANDESITE_TILING = new FBBlock("andesite_tiling", 1.5f, 6.0f);
-		GRANITE_DIORITE_TILING = new FBBlock("granite_diorite_tiling", 1.5f, 6.0f);
-		DIORITE_ANDESITE_TILING = new FBBlock("diorite_andesite_tiling", 1.5f, 6.0f);
-		ANDESITE_GRANITE_TILING = new FBBlock("andesite_granite_tiling", 1.5f, 6.0f);
-		DECORATED_SANDSTONE = new FBBlock("decorated_sandstone", 0.8f, 4.0f);
-		NETHER_BRICK_PILLAR = new FBBlockPillar("nether_brick_pillar", Material.STONE, BlockSoundGroup.STONE, 2.0f, 6.0f);
-		RED_NETHER_BRICK_PILLAR = new FBBlockPillar("red_nether_brick_pillar", Material.STONE, BlockSoundGroup.STONE, 2.0f, 6.0f);
-		
-		SPRUCE_BOOKSHELF = new FBBookshelf("spruce_bookshelf");
-		BIRCH_BOOKSHELF = new FBBookshelf("birch_bookshelf");
-		JUNGLE_BOOKSHELF = new FBBookshelf("jungle_bookshelf");
-		ACACIA_BOOKSHELF = new FBBookshelf("acacia_bookshelf");
-		DARK_OAK_BOOKSHELF = new FBBookshelf("dark_oak_bookshelf");
-		
-		MOSSY_BRICKS = new FBBlock("mossy_bricks", 2.0f, 6.0f);
-		MOSSY_BRICK_STAIRS = new FBStairs(MOSSY_BRICKS.getDefaultState(), "mossy_brick_stairs", 2.0f, 6.0f);
-		MOSSY_BRICK_SLAB = new FBSlab("mossy_brick_slab", 2.0f, 6.0f);
-		SNOW_BRICKS = new FBBlock("snow_bricks", 1.5f, 30.0f);
-		SNOW_BRICK_STAIRS = new FBStairs(SNOW_BRICKS.getDefaultState(), "snow_brick_stairs", 1.5f, 30.0f);
-		SNOW_BRICK_SLAB = new FBSlab("snow_brick_slab", 1.5f, 30.0f);
-		SMOOTH_STONE_STAIRS = new FBStairs(Blocks.SMOOTH_STONE.getDefaultState(), "smooth_stone_stairs", 1.5f, 30.0f);
-		CUT_SANDSTONE_STAIRS = new FBStairs(Blocks.CUT_SANDSTONE.getDefaultState(), "cut_sandstone_stairs", 0.8f, 4.0f);
-		CUT_RED_SANDSTONE_STAIRS = new FBStairs(Blocks.CUT_RED_SANDSTONE.getDefaultState(), "cut_red_sandstone_stairs", 0.8f, 4.0f);
-		
-		OAK_LEAF_CARPET = new FBLeafCarpet("oak_leaf_carpet");
-		SPRUCE_LEAF_CARPET = new FBLeafCarpet("spruce_leaf_carpet");
-		BIRCH_LEAF_CARPET = new FBLeafCarpet("birch_leaf_carpet");
-		JUNGLE_LEAF_CARPET = new FBLeafCarpet("jungle_leaf_carpet");
-		ACACIA_LEAF_CARPET = new FBLeafCarpet("acacia_leaf_carpet");
-		DARK_OAK_LEAF_CARPET = new FBLeafCarpet("dark_oak_leaf_carpet");
-		
-		RED_NETHER_BRICK_FENCE = new FBFence("red_nether_brick_fence", 2.0f, 6.0f);
-		
-		STONE_WALL = new FBWall("stone_wall", 1.5f, 30.0f);
-		SMOOTH_STONE_WALL = new FBWall("smooth_stone_wall", 1.5f, 30.0f);
-		SMOOTH_SANDSTONE_WALL = new FBWall("smooth_sandstone_wall", 0.8f, 4.0f);
-		SMOOTH_RED_SANDSTONE_WALL = new FBWall("smooth_red_sandstone_wall", 0.8f, 4.0f);
-		SMOOTH_QUARTZ_WALL = new FBWall("smooth_quartz_wall", 0.8f, 4.0f);
-		POLISHED_GRANITE_WALL = new FBWall("polished_granite_wall", 1.5f, 30.0f);
-		POLISHED_DIORITE_WALL = new FBWall("polished_diorite_wall", 1.5f, 30.0f);
-		POLISHED_ANDESITE_WALL = new FBWall("polished_andesite_wall", 1.5f, 30.0f);
-		QUARTZ_WALL = new FBWall("quartz_wall", 0.8f, 4.0f);
-		PRISMARINE_BRICK_WALL = new FBWall("prismarine_brick_wall", 1.5f, 30.0f);
-		DARK_PRISMARINE_WALL = new FBWall("dark_prismarine_wall", 1.5f, 30.0f);
-		PURPUR_WALL = new FBWall("purpur_wall", 1.5f, 30.0f);
-		MOSSY_BRICK_WALL = new FBWall("mossy_brick_wall", 2.0f, 6.0f);
-		SNOW_BRICK_WALL = new FBWall("snow_brick_wall", 1.5f, 30.0f);
-		
-		SPRUCE_LECTERN = new FBLectern("spruce_lectern");
-		BIRCH_LECTERN = new FBLectern("birch_lectern");
-		JUNGLE_LECTERN = new FBLectern("jungle_lectern");
-		ACACIA_LECTERN = new FBLectern("acacia_lectern");
-		DARK_OAK_LECTERN = new FBLectern("dark_oak_lectern");
-		
-		GRANITE_PRESSURE_PLATE = new FBPressurePlate("granite_pressure_plate");
-		DIORITE_PRESSURE_PLATE = new FBPressurePlate("diorite_pressure_plate");
-		ANDESITE_PRESSURE_PLATE = new FBPressurePlate("andesite_pressure_plate");
-		GRANITE_BUTTON = new FBButton("granite_button");
-		DIORITE_BUTTON = new FBButton("diorite_button");
-		ANDESITE_BUTTON = new FBButton("andesite_button");
-		
-		BAMBOO_TRAPDOOR = new FBTrapdoor("bamboo_trapdoor", Material.BAMBOO, BlockSoundGroup.BAMBOO_SAPLING, 0.5f, 2.5f);
-		BAMBOO_DOOR = new FBDoor("bamboo_door", Material.BAMBOO, BlockSoundGroup.BAMBOO_SAPLING, 0.5f, 2.5f);
-		GLASS_DOOR = new FBDoor("glass_door", Material.GLASS, BlockSoundGroup.GLASS, 0.3f, 1.5f);
-	}
-
+	public static final FBBlockPillar BAMBOO_BLOCK = new FBBlockPillar("bamboo_block", Material.BAMBOO, BlockSoundGroup.BAMBOO_SAPLING, 0.5f, 2.5f);
+	
+	public static final FBBlock GRANITE_TILING = new FBBlock("granite_tiling", 1.5f, 6.0f);
+	public static final FBBlock DIORITE_TILING = new FBBlock("diorite_tiling", 1.5f, 6.0f);
+	public static final FBBlock ANDESITE_TILING = new FBBlock("andesite_tiling", 1.5f, 6.0f);
+	public static final FBBlock GRANITE_DIORITE_TILING = new FBBlock("granite_diorite_tiling", 1.5f, 6.0f);
+	public static final FBBlock DIORITE_ANDESITE_TILING = new FBBlock("diorite_andesite_tiling", 1.5f, 6.0f);
+	public static final FBBlock ANDESITE_GRANITE_TILING = new FBBlock("andesite_granite_tiling", 1.5f, 6.0f);
+	public static final FBBlock DECORATED_SANDSTONE = new FBBlock("decorated_sandstone", 0.8f, 4.0f);
+	public static final FBBlockPillar NETHER_BRICK_PILLAR = new FBBlockPillar("nether_brick_pillar", Material.STONE, BlockSoundGroup.STONE, 2.0f, 6.0f);
+	public static final FBBlockPillar RED_NETHER_BRICK_PILLAR = new FBBlockPillar("red_nether_brick_pillar", Material.STONE, BlockSoundGroup.STONE, 2.0f, 6.0f);
+	
+	public static final FBBookshelf SPRUCE_BOOKSHELF = new FBBookshelf("spruce_bookshelf");
+	public static final FBBookshelf BIRCH_BOOKSHELF = new FBBookshelf("birch_bookshelf");
+	public static final FBBookshelf JUNGLE_BOOKSHELF = new FBBookshelf("jungle_bookshelf");
+	public static final FBBookshelf ACACIA_BOOKSHELF = new FBBookshelf("acacia_bookshelf");
+	public static final FBBookshelf DARK_OAK_BOOKSHELF = new FBBookshelf("dark_oak_bookshelf");
+	
+	public static final FBBlock MOSSY_BRICKS = new FBBlock("mossy_bricks", 2.0f, 6.0f);
+	public static final FBStairs MOSSY_BRICK_STAIRS = new FBStairs(MOSSY_BRICKS.getDefaultState(), "mossy_brick_stairs", 2.0f, 6.0f);
+	public static final FBSlab MOSSY_BRICK_SLAB = new FBSlab("mossy_brick_slab", 2.0f, 6.0f);
+	public static final FBBlock SNOW_BRICKS = new FBBlock("snow_bricks", 1.5f, 30.0f);
+	public static final FBStairs SNOW_BRICK_STAIRS = new FBStairs(SNOW_BRICKS.getDefaultState(), "snow_brick_stairs", 1.5f, 30.0f);
+	public static final FBSlab SNOW_BRICK_SLAB = new FBSlab("snow_brick_slab", 1.5f, 30.0f);
+	public static final FBStairs SMOOTH_STONE_STAIRS = new FBStairs(Blocks.SMOOTH_STONE.getDefaultState(), "smooth_stone_stairs", 1.5f, 30.0f);
+	public static final FBStairs CUT_SANDSTONE_STAIRS = new FBStairs(Blocks.CUT_SANDSTONE.getDefaultState(), "cut_sandstone_stairs", 0.8f, 4.0f);
+	public static final FBStairs CUT_RED_SANDSTONE_STAIRS = new FBStairs(Blocks.CUT_RED_SANDSTONE.getDefaultState(), "cut_red_sandstone_stairs", 0.8f, 4.0f);
+	public static final FBStairs CRACKED_STONE_BRICK_STAIRS = new FBStairs(Blocks.CRACKED_STONE_BRICKS.getDefaultState(), "cracked_stone_brick_stairs", 1.5f, 30.0f);
+	public static final FBSlab CRACKED_STONE_BRICK_SLAB = new FBSlab("cracked_stone_brick_slab", 1.5f, 30.0f);
+	
+	public static final FBLeafCarpet OAK_LEAF_CARPET = new FBLeafCarpet("oak_leaf_carpet");
+	public static final FBLeafCarpet SPRUCE_LEAF_CARPET = new FBLeafCarpet("spruce_leaf_carpet");
+	public static final FBLeafCarpet BIRCH_LEAF_CARPET = new FBLeafCarpet("birch_leaf_carpet");
+	public static final FBLeafCarpet JUNGLE_LEAF_CARPET = new FBLeafCarpet("jungle_leaf_carpet");
+	public static final FBLeafCarpet ACACIA_LEAF_CARPET = new FBLeafCarpet("acacia_leaf_carpet");
+	public static final FBLeafCarpet DARK_OAK_LEAF_CARPET = new FBLeafCarpet("dark_oak_leaf_carpet");
+	
+	public static final FBFence RED_NETHER_BRICK_FENCE = new FBFence("red_nether_brick_fence", 2.0f, 6.0f);
+	
+	public static final FBWall STONE_WALL = new FBWall("stone_wall", 1.5f, 30.0f);
+	public static final FBWall SMOOTH_STONE_WALL = new FBWall("smooth_stone_wall", 1.5f, 30.0f);
+	public static final FBWall SMOOTH_SANDSTONE_WALL = new FBWall("smooth_sandstone_wall", 0.8f, 4.0f);
+	public static final FBWall SMOOTH_RED_SANDSTONE_WALL = new FBWall("smooth_red_sandstone_wall", 0.8f, 4.0f);
+	public static final FBWall SMOOTH_QUARTZ_WALL = new FBWall("smooth_quartz_wall", 0.8f, 4.0f);
+	public static final FBWall POLISHED_GRANITE_WALL = new FBWall("polished_granite_wall", 1.5f, 30.0f);
+	public static final FBWall POLISHED_DIORITE_WALL = new FBWall("polished_diorite_wall", 1.5f, 30.0f);
+	public static final FBWall POLISHED_ANDESITE_WALL = new FBWall("polished_andesite_wall", 1.5f, 30.0f);
+	public static final FBWall CRACKED_STONE_BRICK_WALL = new FBWall("cracked_stone_brick_wall", 1.5f, 30.0f);
+	public static final FBWall QUARTZ_WALL = new FBWall("quartz_wall", 0.8f, 4.0f);
+	public static final FBWall PRISMARINE_BRICK_WALL = new FBWall("prismarine_brick_wall", 1.5f, 30.0f);
+	public static final FBWall DARK_PRISMARINE_WALL = new FBWall("dark_prismarine_wall", 1.5f, 30.0f);
+	public static final FBWall PURPUR_WALL = new FBWall("purpur_wall", 1.5f, 30.0f);
+	public static final FBWall MOSSY_BRICK_WALL = new FBWall("mossy_brick_wall", 2.0f, 6.0f);
+	public static final FBWall SNOW_BRICK_WALL = new FBWall("snow_brick_wall", 1.5f, 30.0f);
+	
+	public static final FBLectern SPRUCE_LECTERN = new FBLectern("spruce_lectern");
+	public static final FBLectern BIRCH_LECTERN = new FBLectern("birch_lectern");
+	public static final FBLectern JUNGLE_LECTERN = new FBLectern("jungle_lectern");
+	public static final FBLectern ACACIA_LECTERN = new FBLectern("acacia_lectern");
+	public static final FBLectern DARK_OAK_LECTERN = new FBLectern("dark_oak_lectern");
+	
+	public static final FBPressurePlate GRANITE_PRESSURE_PLATE = new FBPressurePlate("granite_pressure_plate");
+	public static final FBPressurePlate DIORITE_PRESSURE_PLATE = new FBPressurePlate("diorite_pressure_plate");
+	public static final FBPressurePlate ANDESITE_PRESSURE_PLATE = new FBPressurePlate("andesite_pressure_plate");
+	public static final FBButton GRANITE_BUTTON = new FBButton("granite_button");
+	public static final FBButton DIORITE_BUTTON = new FBButton("diorite_button");
+	public static final FBButton ANDESITE_BUTTON = new FBButton("andesite_button");
+	
+	public static final FBTrapdoor BAMBOO_TRAPDOOR = new FBTrapdoor("bamboo_trapdoor", Material.BAMBOO, BlockSoundGroup.BAMBOO_SAPLING, 0.5f, 2.5f);
+	public static final FBDoor BAMBOO_DOOR = new FBDoor("bamboo_door", Material.BAMBOO, BlockSoundGroup.BAMBOO_SAPLING, 0.5f, 2.5f);
+	public static final FBDoor GLASS_DOOR = new FBDoor("glass_door", Material.GLASS, BlockSoundGroup.GLASS, 0.3f, 1.5f);
+	
+	public static void init() {}
 }

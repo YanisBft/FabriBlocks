@@ -1,9 +1,17 @@
 {
 	"schemaVersion": 1,
 	"id": "fabriblocks",
+	"version": "1.1.4",
 	"name": "FabriBlocks",
 	"description": "A 1.14 mod that adds building and decorative blocks",
-	"version": "1.1.3",
+	"authors": [
+		"Yanis48"
+	],
+	"contact": {
+		"homepage": "https://minecraft.curseforge.com/projects/fabriblocks",
+		"sources": "https://github.com/Yanis48/FabriBlocks",
+		"issues": "https://github.com/Yanis48/FabriBlocks/issues"
+	},
 	"environment": "*",
 	"entrypoints": {
 		"main": [

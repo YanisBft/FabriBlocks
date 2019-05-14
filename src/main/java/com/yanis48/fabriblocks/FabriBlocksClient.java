@@ -6,8 +6,8 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.render.ColorProviderRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.client.render.block.BlockColorMapper;
-import net.minecraft.client.render.item.ItemColorMapper;
+import net.minecraft.client.color.block.BlockColorProvider;
+import net.minecraft.client.color.item.ItemColorProvider;
 
 public class FabriBlocksClient implements ClientModInitializer {
 	
@@ -25,14 +25,14 @@ public class FabriBlocksClient implements ClientModInitializer {
 	
 	public void registerBlockColor(Block block, Block templateBlock) {
 		ColorProviderRegistry.BLOCK.register((block1, pos, world, layer) -> {
-			BlockColorMapper provider = ColorProviderRegistry.BLOCK.get(templateBlock);
+			BlockColorProvider provider = ColorProviderRegistry.BLOCK.get(templateBlock);
 			return provider == null ? -1 : provider.getColor(block1, pos, world, layer);
 		}, block);
 
 		ColorProviderRegistry.ITEM.register((item, layer) -> {
-			ItemColorMapper provider = ColorProviderRegistry.ITEM.get(templateBlock);
+			ItemColorProvider provider = ColorProviderRegistry.ITEM.get(templateBlock);
 			return provider == null ? -1 : provider.getColor(item, layer);
-		}, block.getItem());
+		}, block.asItem());
 	}
 
 }

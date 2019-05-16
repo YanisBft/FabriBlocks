@@ -1,5 +1,6 @@
 package com.yanis48.fabriblocks;
 
+import com.yanis48.fabriblocks.init.ModBlockEntities;
 import com.yanis48.fabriblocks.init.ModBlockTags;
 import com.yanis48.fabriblocks.init.ModBlocks;
 import com.yanis48.fabriblocks.init.ModItemTags;
@@ -15,7 +16,8 @@ public class FabriBlocks implements ModInitializer {
 	
 	@Override
 	public void onInitialize() {
-		ModBlocks.init();
+		new ModBlocks();
+		new ModBlockEntities();
 		
 		FuelRegistry.INSTANCE.add(ModItemTags.BOOKSHELVES, 300);
 		FuelRegistry.INSTANCE.add(ModItemTags.LECTERNS, 300);

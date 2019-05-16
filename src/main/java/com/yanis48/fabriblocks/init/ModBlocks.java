@@ -93,6 +93,4 @@ public class ModBlocks {
 	public static final FBTrapdoor BAMBOO_TRAPDOOR = new FBTrapdoor("bamboo_trapdoor", Material.BAMBOO, BlockSoundGroup.BAMBOO_SAPLING, 0.5f, 2.5f);
 	public static final FBDoor BAMBOO_DOOR = new FBDoor("bamboo_door", Material.BAMBOO, BlockSoundGroup.BAMBOO_SAPLING, 0.5f, 2.5f);
 	public static final FBDoor GLASS_DOOR = new FBDoor("glass_door", Material.GLASS, BlockSoundGroup.GLASS, 0.3f, 1.5f);
-	
-	public static void init() {}
 }

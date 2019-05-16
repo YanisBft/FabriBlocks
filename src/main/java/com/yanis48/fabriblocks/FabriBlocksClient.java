@@ -1,8 +1,11 @@
 package com.yanis48.fabriblocks;
 
+import com.yanis48.fabriblocks.block.entity.FBLecternBlockEntity;
+import com.yanis48.fabriblocks.block.entity.FBLecternBlockEntityRenderer;
 import com.yanis48.fabriblocks.init.ModBlocks;
 
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.render.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.render.ColorProviderRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -21,6 +24,7 @@ public class FabriBlocksClient implements ClientModInitializer {
 		registerBlockColor(ModBlocks.ACACIA_LEAF_CARPET, Blocks.ACACIA_LEAVES);
 		registerBlockColor(ModBlocks.DARK_OAK_LEAF_CARPET, Blocks.DARK_OAK_LEAVES);
 		
+		BlockEntityRendererRegistry.INSTANCE.register(FBLecternBlockEntity.class, new FBLecternBlockEntityRenderer());	
 	}
 	
 	public void registerBlockColor(Block block, Block templateBlock) {

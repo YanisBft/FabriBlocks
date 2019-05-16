@@ -6,9 +6,11 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import com.yanis48.fabriblocks.block.FBLectern;
-import com.yanis48.fabriblocks.init.ModBlockTags;
+import com.yanis48.fabriblocks.init.ModBlocks;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.LecternBlock;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.WritableBookItem;
 import net.minecraft.item.WrittenBookItem;
@@ -20,12 +22,14 @@ import net.minecraft.world.World;
 public abstract class MixinBookOnLectern {
 	
 	@Inject(method = "useOnBlock", at = @At(value = "HEAD"), cancellable = true)
-	public void useOnBlock(ItemUsageContext itemUsageContext_1, CallbackInfoReturnable<ActionResult> cir) {
-		World world_1 = itemUsageContext_1.getWorld();
-		BlockPos blockPos_1 = itemUsageContext_1.getBlockPos();
-		BlockState blockState_1 = world_1.getBlockState(blockPos_1);
-		if (blockState_1.getBlock().matches(ModBlockTags.LECTERNS)) {
-			cir.setReturnValue(FBLectern.putBookIfAbsent(world_1, blockPos_1, blockState_1, itemUsageContext_1.getItemStack()) ? ActionResult.SUCCESS : ActionResult.PASS);
+	private void useOnBlock(ItemUsageContext context, CallbackInfoReturnable<ActionResult> cir) {
+		World world = context.getWorld();
+		BlockPos pos = context.getBlockPos();
+		BlockState state = world.getBlockState(pos);
+		if (state.getBlock() == ModBlocks.SPRUCE_LECTERN || state.getBlock() == ModBlocks.BIRCH_LECTERN || state.getBlock() == ModBlocks.JUNGLE_LECTERN || state.getBlock() == ModBlocks.ACACIA_LECTERN || state.getBlock() == ModBlocks.DARK_OAK_LECTERN) {
+			cir.setReturnValue(FBLectern.putBookIfAbsent(world, pos, state, context.getItemStack()) ? ActionResult.SUCCESS : ActionResult.PASS);
+		} else if (state.getBlock() == Blocks.LECTERN) {
+			cir.setReturnValue(LecternBlock.putBookIfAbsent(world, pos, state, context.getItemStack()) ? ActionResult.SUCCESS : ActionResult.PASS);
 		} else {
 			cir.setReturnValue(ActionResult.PASS);
 		}

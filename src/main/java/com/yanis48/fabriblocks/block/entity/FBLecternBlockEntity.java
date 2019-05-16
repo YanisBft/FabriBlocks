@@ -43,12 +43,11 @@ public class FBLecternBlockEntity extends BlockEntity implements Clearable, Name
 
 		public ItemStack takeInvStack(int int_1, int int_2) {
 			if (int_1 == 0) {
-				ItemStack itemStack_1 = FBLecternBlockEntity.this.book.split(int_2);
+				ItemStack stack = FBLecternBlockEntity.this.book.split(int_2);
 				if (FBLecternBlockEntity.this.book.isEmpty()) {
 					FBLecternBlockEntity.this.onBookRemoved();
 				}
-				
-				return itemStack_1;
+				return stack;
 			} else {
 				return ItemStack.EMPTY;
 			}
@@ -56,16 +55,16 @@ public class FBLecternBlockEntity extends BlockEntity implements Clearable, Name
 		
 		public ItemStack removeInvStack(int int_1) {
 			if (int_1 == 0) {
-				ItemStack itemStack_1 = FBLecternBlockEntity.this.book;
+				ItemStack stack = FBLecternBlockEntity.this.book;
 				FBLecternBlockEntity.this.book = ItemStack.EMPTY;
 				FBLecternBlockEntity.this.onBookRemoved();
-				return itemStack_1;
+				return stack;
 			} else {
 				return ItemStack.EMPTY;
 			}
 		}
 		
-		public void setInvStack(int int_1, ItemStack itemStack_1) {
+		public void setInvStack(int int_1, ItemStack stack) {
 		}
 		
 		public int getInvMaxStackAmount() {
@@ -84,7 +83,7 @@ public class FBLecternBlockEntity extends BlockEntity implements Clearable, Name
 			}
 		}
 		
-		public boolean isValidInvStack(int int_1, ItemStack itemStack_1) {
+		public boolean isValidInvStack(int int_1, ItemStack stack) {
 			return false;
 		}
 		
@@ -121,12 +120,12 @@ public class FBLecternBlockEntity extends BlockEntity implements Clearable, Name
 	}
 	
 	public boolean hasBook() {
-		Item item_1 = this.book.getItem();
-		return item_1 == Items.WRITABLE_BOOK || item_1 == Items.WRITTEN_BOOK;
+		Item item = this.book.getItem();
+		return item == Items.WRITABLE_BOOK || item == Items.WRITTEN_BOOK;
 	}
 	
-	public void setBook(ItemStack itemStack_1) {
-		this.setBook(itemStack_1, (PlayerEntity)null);
+	public void setBook(ItemStack stack) {
+		this.setBook(stack, null);
 	}
 	
 	private void onBookRemoved() {
@@ -156,7 +155,7 @@ public class FBLecternBlockEntity extends BlockEntity implements Clearable, Name
 	}
 	
 	public int getComparatorOutput() {
-		float float_1 = this.pageCount > 1 ? (float)this.getCurrentPage() / ((float)this.pageCount - 1.0F) : 1.0F;
+		float float_1 = this.pageCount > 1 ? this.getCurrentPage() / (this.pageCount - 1.0F) : 1.0F;
 		return MathHelper.floor(float_1 * 14.0F) + (this.hasBook() ? 1 : 0);
 	}
 	
@@ -168,23 +167,23 @@ public class FBLecternBlockEntity extends BlockEntity implements Clearable, Name
 	}
 	
 	private ServerCommandSource getCommandSource(PlayerEntity player) {
-		String string_2;
-		Object component_2;
+		String name;
+		Object component;
 		if (player == null) {
-			string_2 = "Lectern";
-			component_2 = new TextComponent("Lectern");
+			name = "Lectern";
+			component = new TextComponent("Lectern");
 		} else {
-			string_2 = player.getName().getString();
-			component_2 = player.getDisplayName();
+			name = player.getName().getString();
+			component = player.getDisplayName();
 		}
-		Vec3d vec3d_1 = new Vec3d((double)this.pos.getX() + 0.5D, (double)this.pos.getY() + 0.5D, (double)this.pos.getZ() + 0.5D);
-		return new ServerCommandSource(CommandOutput.DUMMY, vec3d_1, Vec2f.ZERO, (ServerWorld)this.world, 2, string_2, (Component)component_2, this.world.getServer(), player);
+		Vec3d vec3d_1 = new Vec3d(this.pos.getX() + 0.5D, this.pos.getY() + 0.5D, this.pos.getZ() + 0.5D);
+		return new ServerCommandSource(CommandOutput.DUMMY, vec3d_1, Vec2f.ZERO, (ServerWorld)this.world, 2, name, (Component)component, this.world.getServer(), player);
 	}
 	
 	public void fromTag(CompoundTag tag) {
 		super.fromTag(tag);
 		if (tag.containsKey("Book", 10)) {
-			this.book = this.resolveBook(ItemStack.fromTag(tag.getCompound("Book")), (PlayerEntity)null);
+			this.book = this.resolveBook(ItemStack.fromTag(tag.getCompound("Book")), null);
 		} else {
 			this.book = ItemStack.EMPTY;
 		}
@@ -205,7 +204,7 @@ public class FBLecternBlockEntity extends BlockEntity implements Clearable, Name
 		this.setBook(ItemStack.EMPTY);
 	}
 	
-	public Container createMenu(int int_1, PlayerInventory playerInventory_1, PlayerEntity player) {
+	public Container createMenu(int int_1, PlayerInventory inventory, PlayerEntity player) {
 		return new LecternContainer(int_1, this.inventory, this.propertyDelegate);
 	}
 	

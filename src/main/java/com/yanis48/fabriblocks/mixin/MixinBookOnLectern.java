@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import com.yanis48.fabriblocks.block.FBLectern;
-import com.yanis48.fabriblocks.init.ModBlocks;
+import com.yanis48.fabriblocks.init.ModBlockTags;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -26,10 +26,10 @@ public abstract class MixinBookOnLectern {
 		World world = context.getWorld();
 		BlockPos pos = context.getBlockPos();
 		BlockState state = world.getBlockState(pos);
-		if (state.getBlock() == ModBlocks.SPRUCE_LECTERN || state.getBlock() == ModBlocks.BIRCH_LECTERN || state.getBlock() == ModBlocks.JUNGLE_LECTERN || state.getBlock() == ModBlocks.ACACIA_LECTERN || state.getBlock() == ModBlocks.DARK_OAK_LECTERN) {
-			cir.setReturnValue(FBLectern.putBookIfAbsent(world, pos, state, context.getItemStack()) ? ActionResult.SUCCESS : ActionResult.PASS);
-		} else if (state.getBlock() == Blocks.LECTERN) {
+		if (state.getBlock() == Blocks.LECTERN) {
 			cir.setReturnValue(LecternBlock.putBookIfAbsent(world, pos, state, context.getItemStack()) ? ActionResult.SUCCESS : ActionResult.PASS);
+		} else if (state.getBlock().matches(ModBlockTags.LECTERNS) && state.getBlock() != Blocks.LECTERN) {
+			cir.setReturnValue(FBLectern.putBookIfAbsent(world, pos, state, context.getItemStack()) ? ActionResult.SUCCESS : ActionResult.PASS);
 		} else {
 			cir.setReturnValue(ActionResult.PASS);
 		}

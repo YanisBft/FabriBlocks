@@ -21,7 +21,7 @@
 			"com.yanis48.fabriblocks.FabriBlocksClient"
 		]
 	},
-	"requires": {
+	"depends": {
 		"fabric": "*",
 		"fabricloader": ">=0.4.1"
 	},

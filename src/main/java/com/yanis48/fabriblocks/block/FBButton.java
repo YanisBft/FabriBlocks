@@ -16,7 +16,7 @@ public class FBButton extends StoneButtonBlock {
 	public FBButton(String name) {
 		super(FabricBlockSettings.of(Material.PART).strength(0.5f, 2.5f).noCollision().build());
 		Registry.register(Registry.BLOCK, new Identifier(FabriBlocks.MOD_ID, name), this);
-		Registry.register(Registry.ITEM, new Identifier(FabriBlocks.MOD_ID, name), new BlockItem(this, new Item.Settings().stackSize(64).itemGroup(ItemGroup.REDSTONE)));
+		Registry.register(Registry.ITEM, new Identifier(FabriBlocks.MOD_ID, name), new BlockItem(this, new Item.Settings().maxCount(64).group(ItemGroup.REDSTONE)));
 	}
 
 }

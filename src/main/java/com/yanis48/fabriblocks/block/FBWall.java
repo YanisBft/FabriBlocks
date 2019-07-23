@@ -16,7 +16,7 @@ public class FBWall extends WallBlock {
 	public FBWall(String name, float hardness, float resistance) {
 		super(FabricBlockSettings.of(Material.STONE).strength(hardness, resistance).build());
 		Registry.register(Registry.BLOCK, new Identifier(FabriBlocks.MOD_ID, name), this);
-		Registry.register(Registry.ITEM, new Identifier(FabriBlocks.MOD_ID, name), new BlockItem(this, new Item.Settings().stackSize(64).itemGroup(ItemGroup.DECORATIONS)));
+		Registry.register(Registry.ITEM, new Identifier(FabriBlocks.MOD_ID, name), new BlockItem(this, new Item.Settings().maxCount(64).group(ItemGroup.DECORATIONS)));
 	}
 	
 }

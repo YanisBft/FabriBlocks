@@ -17,7 +17,7 @@ public class FBBlockPillar extends PillarBlock {
 	public FBBlockPillar(String name, Material material, BlockSoundGroup soundGroup, float hardness, float resistance) {
 		super(FabricBlockSettings.of(material).sounds(soundGroup).strength(hardness, resistance).build());
 		Registry.register(Registry.BLOCK, new Identifier(FabriBlocks.MOD_ID, name), this);
-		Registry.register(Registry.ITEM, new Identifier(FabriBlocks.MOD_ID, name), new BlockItem(this, new Item.Settings().stackSize(64).itemGroup(ItemGroup.BUILDING_BLOCKS)));
+		Registry.register(Registry.ITEM, new Identifier(FabriBlocks.MOD_ID, name), new BlockItem(this, new Item.Settings().maxCount(64).group(ItemGroup.BUILDING_BLOCKS)));
 	}
 
 }

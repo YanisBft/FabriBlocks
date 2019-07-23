@@ -16,12 +16,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.WrittenBookItem;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.server.command.CommandOutput;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.text.LiteralText;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Clearable;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec2f;
@@ -171,13 +171,13 @@ public class FBLecternBlockEntity extends BlockEntity implements Clearable, Name
 		Object component;
 		if (player == null) {
 			name = "Lectern";
-			component = new TextComponent("Lectern");
+			component = new LiteralText("Lectern");
 		} else {
 			name = player.getName().getString();
 			component = player.getDisplayName();
 		}
 		Vec3d vec3d_1 = new Vec3d(this.pos.getX() + 0.5D, this.pos.getY() + 0.5D, this.pos.getZ() + 0.5D);
-		return new ServerCommandSource(CommandOutput.DUMMY, vec3d_1, Vec2f.ZERO, (ServerWorld)this.world, 2, name, (Component)component, this.world.getServer(), player);
+		return new ServerCommandSource(CommandOutput.DUMMY, vec3d_1, Vec2f.ZERO, (ServerWorld)this.world, 2, name, (Text)component, this.world.getServer(), player);
 	}
 	
 	public void fromTag(CompoundTag tag) {
@@ -208,7 +208,7 @@ public class FBLecternBlockEntity extends BlockEntity implements Clearable, Name
 		return new LecternContainer(int_1, this.inventory, this.propertyDelegate);
 	}
 	
-	public Component getDisplayName() {
-		return new TranslatableComponent("container.lectern", new Object[0]);
+	public Text getDisplayName() {
+		return new TranslatableText("container.lectern", new Object[0]);
 	}
 }

@@ -1,14 +1,14 @@
 {
 	"schemaVersion": 1,
 	"id": "fabriblocks",
-	"version": "1.1.5",
+	"version": "1.1.6",
 	"name": "FabriBlocks",
 	"description": "A mod adding building and decorative blocks",
 	"authors": [
 		"Yanis48"
 	],
 	"contact": {
-		"homepage": "https://minecraft.curseforge.com/projects/fabriblocks",
+		"homepage": "https://www.curseforge.com/minecraft/mc-mods/fabriblocks",
 		"sources": "https://github.com/Yanis48/FabriBlocks",
 		"issues": "https://github.com/Yanis48/FabriBlocks/issues"
 	},
@@ -23,7 +23,7 @@
 	},
 	"depends": {
 		"fabric": "*",
-		"fabricloader": ">=0.4.1"
+		"fabricloader": ">=0.4.5"
 	},
 	"mixins": [
 		"fabriblocks.mixins.json"

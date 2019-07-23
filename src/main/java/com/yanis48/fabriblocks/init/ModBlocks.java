@@ -43,14 +43,14 @@ public class ModBlocks {
 	public static final FBBlock MOSSY_BRICKS = new FBBlock("mossy_bricks", 2.0f, 6.0f);
 	public static final FBStairs MOSSY_BRICK_STAIRS = new FBStairs(MOSSY_BRICKS.getDefaultState(), "mossy_brick_stairs", 2.0f, 6.0f);
 	public static final FBSlab MOSSY_BRICK_SLAB = new FBSlab("mossy_brick_slab", 2.0f, 6.0f);
-	public static final FBBlock SNOW_BRICKS = new FBBlock("snow_bricks", 1.5f, 30.0f);
-	public static final FBStairs SNOW_BRICK_STAIRS = new FBStairs(SNOW_BRICKS.getDefaultState(), "snow_brick_stairs", 1.5f, 30.0f);
-	public static final FBSlab SNOW_BRICK_SLAB = new FBSlab("snow_brick_slab", 1.5f, 30.0f);
-	public static final FBStairs SMOOTH_STONE_STAIRS = new FBStairs(Blocks.SMOOTH_STONE.getDefaultState(), "smooth_stone_stairs", 1.5f, 30.0f);
+	public static final FBBlock SNOW_BRICKS = new FBBlock("snow_bricks", 1.5f, 6.0f);
+	public static final FBStairs SNOW_BRICK_STAIRS = new FBStairs(SNOW_BRICKS.getDefaultState(), "snow_brick_stairs", 1.5f, 6.0f);
+	public static final FBSlab SNOW_BRICK_SLAB = new FBSlab("snow_brick_slab", 1.5f, 6.0f);
+	public static final FBStairs SMOOTH_STONE_STAIRS = new FBStairs(Blocks.SMOOTH_STONE.getDefaultState(), "smooth_stone_stairs", 1.5f, 6.0f);
 	public static final FBStairs CUT_SANDSTONE_STAIRS = new FBStairs(Blocks.CUT_SANDSTONE.getDefaultState(), "cut_sandstone_stairs", 0.8f, 4.0f);
 	public static final FBStairs CUT_RED_SANDSTONE_STAIRS = new FBStairs(Blocks.CUT_RED_SANDSTONE.getDefaultState(), "cut_red_sandstone_stairs", 0.8f, 4.0f);
-	public static final FBStairs CRACKED_STONE_BRICK_STAIRS = new FBStairs(Blocks.CRACKED_STONE_BRICKS.getDefaultState(), "cracked_stone_brick_stairs", 1.5f, 30.0f);
-	public static final FBSlab CRACKED_STONE_BRICK_SLAB = new FBSlab("cracked_stone_brick_slab", 1.5f, 30.0f);
+	public static final FBStairs CRACKED_STONE_BRICK_STAIRS = new FBStairs(Blocks.CRACKED_STONE_BRICKS.getDefaultState(), "cracked_stone_brick_stairs", 1.5f, 6.0f);
+	public static final FBSlab CRACKED_STONE_BRICK_SLAB = new FBSlab("cracked_stone_brick_slab", 1.5f, 6.0f);
 	
 	public static final FBLeafCarpet OAK_LEAF_CARPET = new FBLeafCarpet("oak_leaf_carpet");
 	public static final FBLeafCarpet SPRUCE_LEAF_CARPET = new FBLeafCarpet("spruce_leaf_carpet");
@@ -61,21 +61,21 @@ public class ModBlocks {
 	
 	public static final FBFence RED_NETHER_BRICK_FENCE = new FBFence("red_nether_brick_fence", 2.0f, 6.0f);
 	
-	public static final FBWall STONE_WALL = new FBWall("stone_wall", 1.5f, 30.0f);
-	public static final FBWall SMOOTH_STONE_WALL = new FBWall("smooth_stone_wall", 1.5f, 30.0f);
+	public static final FBWall STONE_WALL = new FBWall("stone_wall", 1.5f, 6.0f);
+	public static final FBWall SMOOTH_STONE_WALL = new FBWall("smooth_stone_wall", 1.5f, 6.0f);
 	public static final FBWall SMOOTH_SANDSTONE_WALL = new FBWall("smooth_sandstone_wall", 0.8f, 4.0f);
 	public static final FBWall SMOOTH_RED_SANDSTONE_WALL = new FBWall("smooth_red_sandstone_wall", 0.8f, 4.0f);
 	public static final FBWall SMOOTH_QUARTZ_WALL = new FBWall("smooth_quartz_wall", 0.8f, 4.0f);
-	public static final FBWall POLISHED_GRANITE_WALL = new FBWall("polished_granite_wall", 1.5f, 30.0f);
-	public static final FBWall POLISHED_DIORITE_WALL = new FBWall("polished_diorite_wall", 1.5f, 30.0f);
-	public static final FBWall POLISHED_ANDESITE_WALL = new FBWall("polished_andesite_wall", 1.5f, 30.0f);
-	public static final FBWall CRACKED_STONE_BRICK_WALL = new FBWall("cracked_stone_brick_wall", 1.5f, 30.0f);
+	public static final FBWall POLISHED_GRANITE_WALL = new FBWall("polished_granite_wall", 1.5f, 6.0f);
+	public static final FBWall POLISHED_DIORITE_WALL = new FBWall("polished_diorite_wall", 1.5f, 6.0f);
+	public static final FBWall POLISHED_ANDESITE_WALL = new FBWall("polished_andesite_wall", 1.5f, 6.0f);
+	public static final FBWall CRACKED_STONE_BRICK_WALL = new FBWall("cracked_stone_brick_wall", 1.5f, 6.0f);
 	public static final FBWall QUARTZ_WALL = new FBWall("quartz_wall", 0.8f, 4.0f);
-	public static final FBWall PRISMARINE_BRICK_WALL = new FBWall("prismarine_brick_wall", 1.5f, 30.0f);
-	public static final FBWall DARK_PRISMARINE_WALL = new FBWall("dark_prismarine_wall", 1.5f, 30.0f);
-	public static final FBWall PURPUR_WALL = new FBWall("purpur_wall", 1.5f, 30.0f);
+	public static final FBWall PRISMARINE_BRICK_WALL = new FBWall("prismarine_brick_wall", 1.5f, 6.0f);
+	public static final FBWall DARK_PRISMARINE_WALL = new FBWall("dark_prismarine_wall", 1.5f, 6.0f);
+	public static final FBWall PURPUR_WALL = new FBWall("purpur_wall", 1.5f, 6.0f);
 	public static final FBWall MOSSY_BRICK_WALL = new FBWall("mossy_brick_wall", 2.0f, 6.0f);
-	public static final FBWall SNOW_BRICK_WALL = new FBWall("snow_brick_wall", 1.5f, 30.0f);
+	public static final FBWall SNOW_BRICK_WALL = new FBWall("snow_brick_wall", 1.5f, 6.0f);
 	
 	public static final FBLectern SPRUCE_LECTERN = new FBLectern("spruce_lectern");
 	public static final FBLectern BIRCH_LECTERN = new FBLectern("birch_lectern");

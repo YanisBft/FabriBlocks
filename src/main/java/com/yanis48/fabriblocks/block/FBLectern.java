@@ -16,7 +16,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
+import net.minecraft.tag.ItemTags;
 import net.minecraft.item.BlockItem;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.BlockHitResult;
@@ -61,15 +63,15 @@ public class FBLectern extends LecternBlock {
 	}
 	
 	@Override
-	public void onBlockRemoved(BlockState state1, World world, BlockPos pos, BlockState state2, boolean boolean_1) {
-		if (state1.getBlock() != state2.getBlock()) {
-			if (state1.get(HAS_BOOK)) {
-				this.dropBook(state1, world, pos);
+	public void onBlockRemoved(BlockState state_1, World world, BlockPos pos, BlockState state_2, boolean boolean_1) {
+		if (state_1.getBlock() != state_2.getBlock()) {
+			if (state_1.get(HAS_BOOK)) {
+				this.dropBook(state_1, world, pos);
 			}
-			if (state1.get(POWERED)) {
+			if (state_1.get(POWERED)) {
 				world.updateNeighborsAlways(pos.down(), this);
 			}
-			super.onBlockRemoved(state1, world, pos, state2, boolean_1);
+			super.onBlockRemoved(state_1, world, pos, state_2, boolean_1);
 		}
 	}
 	
@@ -99,14 +101,15 @@ public class FBLectern extends LecternBlock {
 	}
 	
 	@Override
-	public boolean activate(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hitResult) {
+	public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hitResult) {
 		if (state.get(HAS_BOOK)) {
 			if (!world.isClient) {
 				this.openContainer(world, pos, player);
 			}
-			return true;
+			return ActionResult.SUCCESS;
 		} else {
-			return false;
+			ItemStack stack = player.getStackInHand(hand);
+			return !stack.isEmpty() && !stack.getItem().isIn(ItemTags.LECTERN_BOOKS) ? ActionResult.CONSUME : ActionResult.PASS;
 		}
 	}
 	

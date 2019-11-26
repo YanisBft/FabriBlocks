@@ -1,34 +1,41 @@
 package com.yanis48.fabriblocks.block.entity;
 
-import com.mojang.blaze3d.platform.GlStateManager;
-import com.yanis48.fabriblocks.block.FBLectern;
-
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.LecternBlock;
+import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.VertexConsumer;
+import net.minecraft.client.render.VertexConsumerProvider;
+import net.minecraft.client.render.block.entity.BlockEntityRenderDispatcher;
 import net.minecraft.client.render.block.entity.BlockEntityRenderer;
+import net.minecraft.client.render.block.entity.EnchantingTableBlockEntityRenderer;
 import net.minecraft.client.render.entity.model.BookModel;
-import net.minecraft.util.Identifier;
+import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.client.util.math.Vector3f;
 
 @Environment(EnvType.CLIENT)
 public class FBLecternBlockEntityRenderer extends BlockEntityRenderer<FBLecternBlockEntity> {	
-	private static final Identifier BOOK_TEXTURE = new Identifier("textures/entity/enchanting_table_book.png");
 	private final BookModel book = new BookModel();
 	
+	public FBLecternBlockEntityRenderer(BlockEntityRenderDispatcher dispatcher) {
+		super(dispatcher);
+	}
+	
 	@Override
-	public void render(FBLecternBlockEntity lecternBlockEntity_1, double double_1, double double_2, double double_3, float float_1, int int_1) {
+	public void render(FBLecternBlockEntity lecternBlockEntity_1, float float_1, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int int_1, int int_2) {
 		BlockState state = lecternBlockEntity_1.getCachedState();
-		if (state.get(FBLectern.HAS_BOOK)) {
-			GlStateManager.pushMatrix();
-			GlStateManager.translatef((float)double_1 + 0.5F, (float)double_2 + 1.0F + 0.0625F, (float)double_3 + 0.5F);
-			float float_2 = (state.get(FBLectern.FACING)).rotateYClockwise().asRotation();
-			GlStateManager.rotatef(-float_2, 0.0F, 1.0F, 0.0F);
-			GlStateManager.rotatef(67.5F, 0.0F, 0.0F, 1.0F);
-			GlStateManager.translatef(0.0F, -0.125F, 0.0F);
-			this.bindTexture(BOOK_TEXTURE);
-			GlStateManager.enableCull();
-			this.book.render(0.0F, 0.1F, 0.9F, 1.2F, 0.0F, 0.0625F);
-			GlStateManager.popMatrix();
+		if (state.get(LecternBlock.HAS_BOOK)) {
+			matrixStack.push();
+			matrixStack.translate(0.5D, 1.0625D, 0.5D);
+			float float_2 = state.get(LecternBlock.FACING).rotateYClockwise().asRotation();
+			matrixStack.multiply(Vector3f.POSITIVE_Y.getDegreesQuaternion(-float_2));
+			matrixStack.multiply(Vector3f.POSITIVE_Z.getDegreesQuaternion(67.5F));
+			matrixStack.translate(0.0D, -0.125D, 0.0D);
+			this.book.setPageAngles(0.0F, 0.1F, 0.9F, 1.2F);
+			VertexConsumer vertexConsumer = EnchantingTableBlockEntityRenderer.BOOK_TEX.getVertexConsumer(vertexConsumerProvider, RenderLayer::getEntitySolid);
+			this.book.render(matrixStack, vertexConsumer, int_1, int_2, 1.0F, 1.0F, 1.0F, 1.0F);
+			matrixStack.pop();
 		}
 	}
 }

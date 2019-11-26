@@ -1,21 +1,31 @@
 package com.yanis48.fabriblocks;
 
-import com.yanis48.fabriblocks.block.entity.FBLecternBlockEntity;
 import com.yanis48.fabriblocks.block.entity.FBLecternBlockEntityRenderer;
+import com.yanis48.fabriblocks.init.ModBlockEntities;
 import com.yanis48.fabriblocks.init.ModBlocks;
 
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.render.BlockEntityRendererRegistry;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.render.ColorProviderRegistry;
+import net.fabricmc.fabric.api.client.rendereregistry.v1.BlockEntityRendererRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.color.block.BlockColorProvider;
 import net.minecraft.client.color.item.ItemColorProvider;
+import net.minecraft.client.render.RenderLayer;
 
 public class FabriBlocksClient implements ClientModInitializer {
 	
 	@Override
 	public void onInitializeClient() {
+		
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.OAK_LEAF_CARPET, RenderLayer.getCutoutMipped());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SPRUCE_LEAF_CARPET, RenderLayer.getCutoutMipped());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BIRCH_LEAF_CARPET, RenderLayer.getCutoutMipped());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.JUNGLE_LEAF_CARPET, RenderLayer.getCutoutMipped());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ACACIA_LEAF_CARPET, RenderLayer.getCutoutMipped());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DARK_OAK_LEAF_CARPET, RenderLayer.getCutoutMipped());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GLASS_DOOR, RenderLayer.getCutout());
 		
 		registerBlockColor(ModBlocks.OAK_LEAF_CARPET, Blocks.OAK_LEAVES);
 		registerBlockColor(ModBlocks.SPRUCE_LEAF_CARPET, Blocks.SPRUCE_LEAVES);
@@ -24,7 +34,7 @@ public class FabriBlocksClient implements ClientModInitializer {
 		registerBlockColor(ModBlocks.ACACIA_LEAF_CARPET, Blocks.ACACIA_LEAVES);
 		registerBlockColor(ModBlocks.DARK_OAK_LEAF_CARPET, Blocks.DARK_OAK_LEAVES);
 		
-		BlockEntityRendererRegistry.INSTANCE.register(FBLecternBlockEntity.class, new FBLecternBlockEntityRenderer());	
+		BlockEntityRendererRegistry.INSTANCE.register(ModBlockEntities.LECTERN, FBLecternBlockEntityRenderer::new);
 	}
 	
 	public void registerBlockColor(Block block, Block templateBlock) {
@@ -38,5 +48,4 @@ public class FabriBlocksClient implements ClientModInitializer {
 			return provider == null ? -1 : provider.getColor(item, layer);
 		}, block.asItem());
 	}
-
 }

@@ -182,7 +182,7 @@ public class FBLecternBlockEntity extends BlockEntity implements Clearable, Name
 	
 	public void fromTag(CompoundTag tag) {
 		super.fromTag(tag);
-		if (tag.containsKey("Book", 10)) {
+		if (tag.contains("Book", 10)) {
 			this.book = this.resolveBook(ItemStack.fromTag(tag.getCompound("Book")), null);
 		} else {
 			this.book = ItemStack.EMPTY;

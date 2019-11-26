@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "fabriblocks",
-	"version": "1.1.6",
+	"version": "1.1.7",
 	"name": "FabriBlocks",
 	"description": "A mod adding building and decorative blocks",
 	"authors": [
@@ -12,6 +12,7 @@
 		"sources": "https://github.com/Yanis48/FabriBlocks",
 		"issues": "https://github.com/Yanis48/FabriBlocks/issues"
 	},
+	"license": "GPLv3",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -23,7 +24,7 @@
 	},
 	"depends": {
 		"fabric": "*",
-		"fabricloader": ">=0.4.5"
+		"fabricloader": ">=0.7.0"
 	},
 	"mixins": [
 		"fabriblocks.mixins.json"

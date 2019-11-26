@@ -1,0 +1,8 @@
+{
+	"replace": false,
+	"values": [
+		"fabriblocks:mossy_brick_slab",
+		"fabriblocks:snow_brick_slab",
+		"fabriblocks:cracked_stone_brick_slab"
+	]
+}

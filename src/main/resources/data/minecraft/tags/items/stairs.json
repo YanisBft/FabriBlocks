@@ -1,0 +1,11 @@
+{
+	"replace": false,
+	"values": [
+		"fabriblocks:mossy_brick_stairs",
+		"fabriblocks:snow_brick_stairs",
+		"fabriblocks:smooth_stone_stairs",
+		"fabriblocks:cut_sandstone_stairs",
+		"fabriblocks:cut_red_sandstone_stairs",
+		"fabriblocks:cracked_stone_brick_stairs"
+	]
+}

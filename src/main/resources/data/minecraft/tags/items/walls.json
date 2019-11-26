@@ -1,0 +1,20 @@
+{
+	"replace": false,
+	"values": [
+		"fabriblocks:mossy_brick_wall",
+		"fabriblocks:snow_brick_wall",
+		"fabriblocks:stone_wall",
+		"fabriblocks:smooth_stone_wall",
+		"fabriblocks:smooth_sandstone_wall",
+		"fabriblocks:smooth_red_sandstone_wall",
+		"fabriblocks:smooth_quartz_wall",
+		"fabriblocks:polished_granite_wall",
+		"fabriblocks:polished_diorite_wall",
+		"fabriblocks:polished_andesite_wall",
+		"fabriblocks:cracked_stone_brick_wall",
+		"fabriblocks:quartz_wall",
+		"fabriblocks:prismarine_brick_wall",
+		"fabriblocks:dark_prismarine_wall",
+		"fabriblocks:purpur_wall"
+	]
+}

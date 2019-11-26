@@ -1,0 +1,11 @@
+{
+	"replace": false,
+	"values": [
+		"fabriblocks:oak_leaf_carpet",
+		"fabriblocks:spruce_leaf_carpet",
+		"fabriblocks:birch_leaf_carpet",
+		"fabriblocks:jungle_leaf_carpet",
+		"fabriblocks:acacia_leaf_carpet",
+		"fabriblocks:dark_oak_leaf_carpet"
+	]
+}

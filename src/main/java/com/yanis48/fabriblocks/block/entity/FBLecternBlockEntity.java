@@ -27,6 +27,8 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec2f;
 import net.minecraft.util.math.Vec3d;
 
+import java.util.Objects;
+
 public class FBLecternBlockEntity extends BlockEntity implements Clearable, NamedScreenHandlerFactory {
     private ItemStack book;
     private int currentPage;
@@ -88,7 +90,7 @@ public class FBLecternBlockEntity extends BlockEntity implements Clearable, Name
 
         @Override
         public boolean canPlayerUse(PlayerEntity player) {
-            if (FBLecternBlockEntity.this.world.getBlockEntity(FBLecternBlockEntity.this.pos) != FBLecternBlockEntity.this) {
+            if (Objects.requireNonNull(FBLecternBlockEntity.this.world).getBlockEntity(FBLecternBlockEntity.this.pos) != FBLecternBlockEntity.this) {
                 return false;
             } else {
                 return !(player.squaredDistanceTo(FBLecternBlockEntity.this.pos.getX() + 0.5D, FBLecternBlockEntity.this.pos.getY() + 0.5D, FBLecternBlockEntity.this.pos.getZ() + 0.5D) > 64.0D) && FBLecternBlockEntity.this.hasBook();
@@ -145,7 +147,7 @@ public class FBLecternBlockEntity extends BlockEntity implements Clearable, Name
     private void onBookRemoved() {
         this.currentPage = 0;
         this.pageCount = 0;
-        FBLectern.setHasBook(this.getWorld(), this.getPos(), this.getCachedState(), false);
+        FBLectern.setHasBook(Objects.requireNonNull(this.getWorld()), this.getPos(), this.getCachedState(), false);
     }
 
     public void setBook(ItemStack stack, PlayerEntity player) {
@@ -164,7 +166,7 @@ public class FBLecternBlockEntity extends BlockEntity implements Clearable, Name
         if (int_2 != this.currentPage) {
             this.currentPage = int_2;
             this.markDirty();
-            FBLectern.setPowered(this.getWorld(), this.getPos(), this.getCachedState());
+            FBLectern.setPowered(Objects.requireNonNull(this.getWorld()), this.getPos(), this.getCachedState());
         }
     }
 
@@ -191,7 +193,7 @@ public class FBLecternBlockEntity extends BlockEntity implements Clearable, Name
             component = player.getDisplayName();
         }
         Vec3d vec3d_1 = new Vec3d(this.pos.getX() + 0.5D, this.pos.getY() + 0.5D, this.pos.getZ() + 0.5D);
-        return new ServerCommandSource(CommandOutput.DUMMY, vec3d_1, Vec2f.ZERO, (ServerWorld) this.world, 2, name, component, this.world.getServer(), player);
+        return new ServerCommandSource(CommandOutput.DUMMY, vec3d_1, Vec2f.ZERO, (ServerWorld) this.world, 2, name, component, Objects.requireNonNull(this.world).getServer(), player);
     }
 
     @Override

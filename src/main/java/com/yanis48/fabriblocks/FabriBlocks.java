@@ -15,9 +15,6 @@ public class FabriBlocks implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        new ModBlocks();
-        new ModBlockEntities();
-
         FuelRegistry.INSTANCE.add(ModItemTags.BOOKSHELVES, 300);
         FuelRegistry.INSTANCE.add(ModItemTags.LECTERNS, 300);
         FuelRegistry.INSTANCE.add(ModBlocks.BAMBOO_BLOCK, 300);

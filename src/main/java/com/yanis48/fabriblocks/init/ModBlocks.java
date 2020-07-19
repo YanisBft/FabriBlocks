@@ -5,6 +5,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.sound.BlockSoundGroup;
 
+@SuppressWarnings("unused")
 public class ModBlocks {
 
     public static final FBBlock SCUTE_BLOCK = new FBBlock("scute_block", 1.0f, 5.0f);

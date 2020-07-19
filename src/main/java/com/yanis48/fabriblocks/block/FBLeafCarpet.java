@@ -25,21 +25,25 @@ public class FBLeafCarpet extends Block {
         Registry.register(Registry.ITEM, new Identifier(FabriBlocks.MOD_ID, name), new BlockItem(this, new Item.Settings().maxCount(64).group(ItemGroup.DECORATIONS)));
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView blockView, BlockPos pos, ShapeContext entityContext) {
         return SHAPE;
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state_1, Direction direction, BlockState state_2, WorldAccess world, BlockPos pos_1, BlockPos pos_2) {
         return !state_1.canPlaceAt(world, pos_1) ? Blocks.AIR.getDefaultState() : super.getStateForNeighborUpdate(state_1, direction, state_2, world, pos_1, pos_2);
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public boolean canPlaceAt(BlockState state, WorldView worldView, BlockPos pos) {
         return !worldView.isAir(pos.down());
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public int getOpacity(BlockState state, BlockView blockView, BlockPos pos) {
         return 1;

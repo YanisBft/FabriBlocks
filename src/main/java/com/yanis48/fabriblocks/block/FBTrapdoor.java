@@ -2,7 +2,7 @@ package com.yanis48.fabriblocks.block;
 
 import com.yanis48.fabriblocks.FabriBlocks;
 
-import net.fabricmc.fabric.api.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.block.TrapdoorBlock;
@@ -25,7 +25,7 @@ import net.minecraft.world.World;
 public class FBTrapdoor extends TrapdoorBlock {
 	
 	public FBTrapdoor(String name, Material material, BlockSoundGroup soundGroup, float hardness, float resistance) {
-		super(FabricBlockSettings.of(material).sounds(soundGroup).strength(hardness, resistance).nonOpaque().build());
+		super(FabricBlockSettings.of(material).sounds(soundGroup).strength(hardness, resistance).nonOpaque());
 		Registry.register(Registry.BLOCK, new Identifier(FabriBlocks.MOD_ID, name), this);
 		Registry.register(Registry.ITEM, new Identifier(FabriBlocks.MOD_ID, name), new BlockItem(this, new Item.Settings().maxCount(64).group(ItemGroup.REDSTONE)));
 	}

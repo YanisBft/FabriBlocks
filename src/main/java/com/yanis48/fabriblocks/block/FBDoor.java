@@ -2,7 +2,7 @@ package com.yanis48.fabriblocks.block;
 
 import com.yanis48.fabriblocks.FabriBlocks;
 
-import net.fabricmc.fabric.api.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.DoorBlock;
 import net.minecraft.block.Material;
@@ -22,9 +22,9 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 
 public class FBDoor extends DoorBlock {
-	
+
 	public FBDoor(String name, Material material, BlockSoundGroup soundGroup, float hardness, float resistance) {
-		super(FabricBlockSettings.of(material).sounds(soundGroup).strength(hardness, resistance).nonOpaque().build());
+		super(FabricBlockSettings.of(material).sounds(soundGroup).strength(hardness, resistance).nonOpaque());
 		Registry.register(Registry.BLOCK, new Identifier(FabriBlocks.MOD_ID, name), this);
 		Registry.register(Registry.ITEM, new Identifier(FabriBlocks.MOD_ID, name), new BlockItem(this, new Item.Settings().maxCount(64).group(ItemGroup.REDSTONE)));
 	}
@@ -36,7 +36,7 @@ public class FBDoor extends DoorBlock {
 		if (this.material == Material.BAMBOO) {
 			world.playSound(player, pos, state.get(OPEN) ? SoundEvents.BLOCK_BAMBOO_BREAK : SoundEvents.BLOCK_BAMBOO_PLACE, SoundCategory.BLOCKS, 1.0F, world.random.nextFloat() * 0.1F + 0.9F);
 		} else {
-			world.playLevelEvent(player, state.get(OPEN) ? 1011 : 1005, pos, 0);
+			world.syncWorldEvent(player, state.get(OPEN) ? 1011 : 1005, pos, 0);
 		}
 		return ActionResult.SUCCESS;
 	}

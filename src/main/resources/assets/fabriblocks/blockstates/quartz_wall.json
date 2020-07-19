@@ -3,16 +3,16 @@
         {   "when": { "up": "true" },
             "apply": { "model": "fabriblocks:block/quartz_wall_post" }
         },
-        {   "when": { "north": "true" },
+        {   "when": { "OR": [ { "north": "low" }, { "north": "tall" } ] },
             "apply": { "model": "fabriblocks:block/quartz_wall_side", "uvlock": true }
         },
-        {   "when": { "east": "true" },
+        {   "when": { "OR": [ { "east": "low" }, { "east": "tall" } ] },
             "apply": { "model": "fabriblocks:block/quartz_wall_side", "y": 90, "uvlock": true }
         },
-        {   "when": { "south": "true" },
+        {   "when": { "OR": [ { "south": "low" }, { "south": "tall" } ] },
             "apply": { "model": "fabriblocks:block/quartz_wall_side", "y": 180, "uvlock": true }
         },
-        {   "when": { "west": "true" },
+        {   "when": { "OR": [ { "west": "low" }, { "west": "tall" } ] },
             "apply": { "model": "fabriblocks:block/quartz_wall_side", "y": 270, "uvlock": true }
         }
     ]

@@ -3,11 +3,8 @@ package com.yanis48.fabriblocks.block.entity;
 import com.yanis48.fabriblocks.block.FBLectern;
 import com.yanis48.fabriblocks.init.ModBlockEntities;
 
+import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.container.Container;
-import net.minecraft.container.LecternContainer;
-import net.minecraft.container.NameableContainerProvider;
-import net.minecraft.container.PropertyDelegate;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
@@ -16,6 +13,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.WrittenBookItem;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.screen.LecternScreenHandler;
+import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.screen.PropertyDelegate;
+import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.command.CommandOutput;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.world.ServerWorld;
@@ -27,21 +28,21 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec2f;
 import net.minecraft.util.math.Vec3d;
 
-public class FBLecternBlockEntity extends BlockEntity implements Clearable, NameableContainerProvider {
+public class FBLecternBlockEntity extends BlockEntity implements Clearable, NamedScreenHandlerFactory {
 	private final Inventory inventory = new Inventory() {
-		public int getInvSize() {
+		public int size() {
 			return 1;
 		}
 		
-		public boolean isInvEmpty() {
+		public boolean isEmpty() {
 			return FBLecternBlockEntity.this.book.isEmpty();
 		}
 		
-		public ItemStack getInvStack(int int_1) {
+		public ItemStack getStack(int int_1) {
 			return int_1 == 0 ? FBLecternBlockEntity.this.book : ItemStack.EMPTY;
 		}
 
-		public ItemStack takeInvStack(int int_1, int int_2) {
+		public ItemStack removeStack(int int_1, int int_2) {
 			if (int_1 == 0) {
 				ItemStack stack = FBLecternBlockEntity.this.book.split(int_2);
 				if (FBLecternBlockEntity.this.book.isEmpty()) {
@@ -53,7 +54,7 @@ public class FBLecternBlockEntity extends BlockEntity implements Clearable, Name
 			}
 		}
 		
-		public ItemStack removeInvStack(int int_1) {
+		public ItemStack removeStack(int int_1) {
 			if (int_1 == 0) {
 				ItemStack stack = FBLecternBlockEntity.this.book;
 				FBLecternBlockEntity.this.book = ItemStack.EMPTY;
@@ -64,10 +65,10 @@ public class FBLecternBlockEntity extends BlockEntity implements Clearable, Name
 			}
 		}
 		
-		public void setInvStack(int int_1, ItemStack stack) {
+		public void setStack(int int_1, ItemStack stack) {
 		}
 		
-		public int getInvMaxStackAmount() {
+		public int getMaxCountPerStack() {
 			return 1;
 		}
 		
@@ -75,15 +76,15 @@ public class FBLecternBlockEntity extends BlockEntity implements Clearable, Name
 			FBLecternBlockEntity.this.markDirty();
 		}
 		
-		public boolean canPlayerUseInv(PlayerEntity player) {
+		public boolean canPlayerUse(PlayerEntity player) {
 			if (FBLecternBlockEntity.this.world.getBlockEntity(FBLecternBlockEntity.this.pos) != FBLecternBlockEntity.this) {
 				return false;
 			} else {
-				return player.squaredDistanceTo(FBLecternBlockEntity.this.pos.getX() + 0.5D, FBLecternBlockEntity.this.pos.getY() + 0.5D, FBLecternBlockEntity.this.pos.getZ() + 0.5D) > 64.0D ? false : FBLecternBlockEntity.this.hasBook();
+				return !(player.squaredDistanceTo(FBLecternBlockEntity.this.pos.getX() + 0.5D, FBLecternBlockEntity.this.pos.getY() + 0.5D, FBLecternBlockEntity.this.pos.getZ() + 0.5D) > 64.0D) && FBLecternBlockEntity.this.hasBook();
 			}
 		}
 		
-		public boolean isValidInvStack(int int_1, ItemStack stack) {
+		public boolean isValid(int int_1, ItemStack stack) {
 			return false;
 		}
 		
@@ -168,7 +169,7 @@ public class FBLecternBlockEntity extends BlockEntity implements Clearable, Name
 	
 	private ServerCommandSource getCommandSource(PlayerEntity player) {
 		String name;
-		Object component;
+		Text component;
 		if (player == null) {
 			name = "Lectern";
 			component = new LiteralText("Lectern");
@@ -177,11 +178,11 @@ public class FBLecternBlockEntity extends BlockEntity implements Clearable, Name
 			component = player.getDisplayName();
 		}
 		Vec3d vec3d_1 = new Vec3d(this.pos.getX() + 0.5D, this.pos.getY() + 0.5D, this.pos.getZ() + 0.5D);
-		return new ServerCommandSource(CommandOutput.DUMMY, vec3d_1, Vec2f.ZERO, (ServerWorld)this.world, 2, name, (Text)component, this.world.getServer(), player);
+		return new ServerCommandSource(CommandOutput.DUMMY, vec3d_1, Vec2f.ZERO, (ServerWorld)this.world, 2, name, component, this.world.getServer(), player);
 	}
 	
-	public void fromTag(CompoundTag tag) {
-		super.fromTag(tag);
+	public void fromTag(BlockState state, CompoundTag tag) {
+		super.fromTag(state, tag);
 		if (tag.contains("Book", 10)) {
 			this.book = this.resolveBook(ItemStack.fromTag(tag.getCompound("Book")), null);
 		} else {
@@ -204,8 +205,8 @@ public class FBLecternBlockEntity extends BlockEntity implements Clearable, Name
 		this.setBook(ItemStack.EMPTY);
 	}
 	
-	public Container createMenu(int int_1, PlayerInventory inventory, PlayerEntity player) {
-		return new LecternContainer(int_1, this.inventory, this.propertyDelegate);
+	public ScreenHandler createMenu(int int_1, PlayerInventory inventory, PlayerEntity player) {
+		return new LecternScreenHandler(int_1, this.inventory, this.propertyDelegate);
 	}
 	
 	public Text getDisplayName() {

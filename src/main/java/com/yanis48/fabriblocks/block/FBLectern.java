@@ -3,7 +3,7 @@ package com.yanis48.fabriblocks.block;
 import com.yanis48.fabriblocks.FabriBlocks;
 import com.yanis48.fabriblocks.block.entity.FBLecternBlockEntity;
 
-import net.fabricmc.fabric.api.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LecternBlock;
 import net.minecraft.block.Material;
@@ -31,7 +31,7 @@ import net.minecraft.world.World;
 public class FBLectern extends LecternBlock {
 
 	public FBLectern(String name) {
-		super(FabricBlockSettings.of(Material.WOOD).strength(2.5f, 1.0f).build());
+		super(FabricBlockSettings.of(Material.WOOD).strength(2.5f, 1.0f));
 		Registry.register(Registry.BLOCK, new Identifier(FabriBlocks.MOD_ID, name), this);
 		Registry.register(Registry.ITEM, new Identifier(FabriBlocks.MOD_ID, name), new BlockItem(this, new Item.Settings().maxCount(64).group(ItemGroup.REDSTONE)));
 	}
@@ -63,7 +63,7 @@ public class FBLectern extends LecternBlock {
 	}
 	
 	@Override
-	public void onBlockRemoved(BlockState state_1, World world, BlockPos pos, BlockState state_2, boolean boolean_1) {
+	public void onStateReplaced(BlockState state_1, World world, BlockPos pos, BlockState state_2, boolean boolean_1) {
 		if (state_1.getBlock() != state_2.getBlock()) {
 			if (state_1.get(HAS_BOOK)) {
 				this.dropBook(state_1, world, pos);
@@ -71,7 +71,7 @@ public class FBLectern extends LecternBlock {
 			if (state_1.get(POWERED)) {
 				world.updateNeighborsAlways(pos.down(), this);
 			}
-			super.onBlockRemoved(state_1, world, pos, state_2, boolean_1);
+			super.onStateReplaced(state_1, world, pos, state_2, boolean_1);
 		}
 	}
 	
@@ -83,7 +83,7 @@ public class FBLectern extends LecternBlock {
 			ItemStack stack = lecternBe.getBook().copy();
 			float float_1 = 0.25F * (float)direction_1.getOffsetX();
 			float float_2 = 0.25F * (float)direction_1.getOffsetZ();
-			ItemEntity itemEntity_1 = new ItemEntity(world, (double)pos.getX() + 0.5D + (double)float_1, (double)(pos.getY() + 1), (double)pos.getZ() + 0.5D + (double)float_2, stack);
+			ItemEntity itemEntity_1 = new ItemEntity(world, (double)pos.getX() + 0.5D + (double)float_1, pos.getY() + 1, (double)pos.getZ() + 0.5D + (double)float_2, stack);
 			itemEntity_1.setToDefaultPickupDelay();
 			world.spawnEntity(itemEntity_1);
 			lecternBe.clear();
@@ -116,7 +116,7 @@ public class FBLectern extends LecternBlock {
 	private void openContainer(World world, BlockPos pos, PlayerEntity player) {
 		BlockEntity be = world.getBlockEntity(pos);
 		if (be instanceof FBLecternBlockEntity) {
-			player.openContainer((FBLecternBlockEntity)be);
+			player.openHandledScreen((FBLecternBlockEntity)be);
 			player.incrementStat(Stats.INTERACT_WITH_LECTERN);
 		}
 	}

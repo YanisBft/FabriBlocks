@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.2.6-SNAPSHOT'
+	id 'fabric-loom' version '0.4-SNAPSHOT'
 }
 
 sourceCompatibility = 1.8
@@ -12,12 +12,12 @@ minecraft {
 }
 
 dependencies {
-	minecraft "com.mojang:minecraft:1.15-pre2"
-	mappings "net.fabricmc:yarn:1.15-pre2+build.3:v2"
-	modCompile "net.fabricmc:fabric-loader:0.7.1+build.173"
+	minecraft "com.mojang:minecraft:1.16.1"
+	mappings "net.fabricmc:yarn:1.16.1+build.21:v2"
+	modImplementation "net.fabricmc:fabric-loader:0.9.0+build.204"
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
-	modCompile "net.fabricmc.fabric-api:fabric-api:0.4.15+build.267-1.15"
+	modCompile "net.fabricmc.fabric-api:fabric-api:0.15.0+build.379-1.16.1"
 }
 
 // Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task

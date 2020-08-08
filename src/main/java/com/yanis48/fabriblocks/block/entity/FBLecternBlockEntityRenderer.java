@@ -33,7 +33,7 @@ public class FBLecternBlockEntityRenderer extends BlockEntityRenderer<FBLecternB
 			matrixStack.multiply(Vector3f.POSITIVE_Z.getDegreesQuaternion(67.5F));
 			matrixStack.translate(0.0D, -0.125D, 0.0D);
 			this.book.setPageAngles(0.0F, 0.1F, 0.9F, 1.2F);
-			VertexConsumer vertexConsumer = EnchantingTableBlockEntityRenderer.BOOK_TEX.getVertexConsumer(vertexConsumerProvider, RenderLayer::getEntitySolid);
+			VertexConsumer vertexConsumer = EnchantingTableBlockEntityRenderer.BOOK_TEXTURE.getVertexConsumer(vertexConsumerProvider, RenderLayer::getEntitySolid);
 			this.book.render(matrixStack, vertexConsumer, int_1, int_2, 1.0F, 1.0F, 1.0F, 1.0F);
 			matrixStack.pop();
 		}

@@ -28,7 +28,7 @@ public abstract class MixinBookOnLectern {
 		BlockState state = world.getBlockState(pos);
 		if (state.getBlock() == Blocks.LECTERN) {
 			cir.setReturnValue(LecternBlock.putBookIfAbsent(world, pos, state, context.getStack()) ? ActionResult.SUCCESS : ActionResult.PASS);
-		} else if (state.getBlock().matches(ModBlockTags.LECTERNS) && state.getBlock() != Blocks.LECTERN) {
+		} else if (state.getBlock().isIn(ModBlockTags.LECTERNS) && state.getBlock() != Blocks.LECTERN) {
 			cir.setReturnValue(FBLectern.putBookIfAbsent(world, pos, state, context.getStack()) ? ActionResult.SUCCESS : ActionResult.PASS);
 		} else {
 			cir.setReturnValue(ActionResult.PASS);

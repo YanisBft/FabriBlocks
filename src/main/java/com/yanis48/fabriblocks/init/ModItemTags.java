@@ -9,6 +9,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItemTags {
 	
+	public static final Tag<Item> LEAF_CARPETS = register("leaf_carpets");
 	public static final Tag<Item> BOOKSHELVES = register("bookshelves");
 	public static final Tag<Item> LECTERNS = register("lecterns");
 	

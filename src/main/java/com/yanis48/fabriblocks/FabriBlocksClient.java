@@ -19,12 +19,9 @@ public class FabriBlocksClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.OAK_LEAF_CARPET, RenderLayer.getCutoutMipped());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SPRUCE_LEAF_CARPET, RenderLayer.getCutoutMipped());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BIRCH_LEAF_CARPET, RenderLayer.getCutoutMipped());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.JUNGLE_LEAF_CARPET, RenderLayer.getCutoutMipped());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ACACIA_LEAF_CARPET, RenderLayer.getCutoutMipped());
-		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DARK_OAK_LEAF_CARPET, RenderLayer.getCutoutMipped());
+		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutoutMipped(),
+				ModBlocks.OAK_LEAF_CARPET, ModBlocks.SPRUCE_LEAF_CARPET, ModBlocks.BIRCH_LEAF_CARPET,
+				ModBlocks.JUNGLE_LEAF_CARPET, ModBlocks.ACACIA_LEAF_CARPET, ModBlocks.DARK_OAK_LEAF_CARPET);
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GLASS_DOOR, RenderLayer.getCutout());
 		
 		registerBlockColor(ModBlocks.OAK_LEAF_CARPET, Blocks.OAK_LEAVES);

@@ -1,6 +1,6 @@
-package com.yanis48.fabriblocks.init;
+package com.yanisbft.fabriblocks.init;
 
-import com.yanis48.fabriblocks.FabriBlocks;
+import com.yanisbft.fabriblocks.FabriBlocks;
 
 import net.fabricmc.fabric.api.tag.TagRegistry;
 import net.minecraft.item.Item;

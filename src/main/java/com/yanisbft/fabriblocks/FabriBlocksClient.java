@@ -1,8 +1,8 @@
-package com.yanis48.fabriblocks;
+package com.yanisbft.fabriblocks;
 
-import com.yanis48.fabriblocks.block.entity.FBLecternBlockEntityRenderer;
-import com.yanis48.fabriblocks.init.ModBlockEntities;
-import com.yanis48.fabriblocks.init.ModBlocks;
+import com.yanisbft.fabriblocks.block.entity.FBLecternBlockEntityRenderer;
+import com.yanisbft.fabriblocks.init.ModBlockEntities;
+import com.yanisbft.fabriblocks.init.ModBlocks;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;

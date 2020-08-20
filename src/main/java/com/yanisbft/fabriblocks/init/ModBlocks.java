@@ -1,18 +1,18 @@
-package com.yanis48.fabriblocks.init;
+package com.yanisbft.fabriblocks.init;
 
-import com.yanis48.fabriblocks.block.FBBlock;
-import com.yanis48.fabriblocks.block.FBBlockPillar;
-import com.yanis48.fabriblocks.block.FBBookshelf;
-import com.yanis48.fabriblocks.block.FBButton;
-import com.yanis48.fabriblocks.block.FBDoor;
-import com.yanis48.fabriblocks.block.FBFence;
-import com.yanis48.fabriblocks.block.FBLeafCarpet;
-import com.yanis48.fabriblocks.block.FBLectern;
-import com.yanis48.fabriblocks.block.FBPressurePlate;
-import com.yanis48.fabriblocks.block.FBSlab;
-import com.yanis48.fabriblocks.block.FBStairs;
-import com.yanis48.fabriblocks.block.FBTrapdoor;
-import com.yanis48.fabriblocks.block.FBWall;
+import com.yanisbft.fabriblocks.block.FBBlock;
+import com.yanisbft.fabriblocks.block.FBBlockPillar;
+import com.yanisbft.fabriblocks.block.FBBookshelf;
+import com.yanisbft.fabriblocks.block.FBButton;
+import com.yanisbft.fabriblocks.block.FBDoor;
+import com.yanisbft.fabriblocks.block.FBFence;
+import com.yanisbft.fabriblocks.block.FBLeafCarpet;
+import com.yanisbft.fabriblocks.block.FBLectern;
+import com.yanisbft.fabriblocks.block.FBPressurePlate;
+import com.yanisbft.fabriblocks.block.FBSlab;
+import com.yanisbft.fabriblocks.block.FBStairs;
+import com.yanisbft.fabriblocks.block.FBTrapdoor;
+import com.yanisbft.fabriblocks.block.FBWall;
 
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;

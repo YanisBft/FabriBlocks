@@ -1,4 +1,4 @@
-package com.yanis48.fabriblocks.block.entity;
+package com.yanisbft.fabriblocks.block.entity;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

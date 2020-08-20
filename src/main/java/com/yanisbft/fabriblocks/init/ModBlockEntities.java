@@ -1,7 +1,7 @@
-package com.yanis48.fabriblocks.init;
+package com.yanisbft.fabriblocks.init;
 
-import com.yanis48.fabriblocks.FabriBlocks;
-import com.yanis48.fabriblocks.block.entity.FBLecternBlockEntity;
+import com.yanisbft.fabriblocks.FabriBlocks;
+import com.yanisbft.fabriblocks.block.entity.FBLecternBlockEntity;
 
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;

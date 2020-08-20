@@ -5,7 +5,7 @@
 	"name": "FabriBlocks",
 	"description": "A mod adding building and decorative blocks",
 	"authors": [
-		"Yanis48"
+		"YanisBft"
 	],
 	"contact": {
 		"homepage": "https://www.curseforge.com/minecraft/mc-mods/fabriblocks",
@@ -16,10 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.yanis48.fabriblocks.FabriBlocks"
+			"com.yanisbft.fabriblocks.FabriBlocks"
 		],
 		"client": [
-			"com.yanis48.fabriblocks.FabriBlocksClient"
+			"com.yanisbft.fabriblocks.FabriBlocksClient"
 		]
 	},
 	"depends": {

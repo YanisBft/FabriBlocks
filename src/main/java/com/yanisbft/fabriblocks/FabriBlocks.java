@@ -1,9 +1,9 @@
-package com.yanis48.fabriblocks;
+package com.yanisbft.fabriblocks;
 
-import com.yanis48.fabriblocks.init.ModBlockEntities;
-import com.yanis48.fabriblocks.init.ModBlockTags;
-import com.yanis48.fabriblocks.init.ModBlocks;
-import com.yanis48.fabriblocks.init.ModItemTags;
+import com.yanisbft.fabriblocks.init.ModBlockEntities;
+import com.yanisbft.fabriblocks.init.ModBlockTags;
+import com.yanisbft.fabriblocks.init.ModBlocks;
+import com.yanisbft.fabriblocks.init.ModItemTags;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;

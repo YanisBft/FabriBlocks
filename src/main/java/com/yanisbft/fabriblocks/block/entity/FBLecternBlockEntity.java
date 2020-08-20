@@ -1,9 +1,9 @@
-package com.yanis48.fabriblocks.block.entity;
+package com.yanisbft.fabriblocks.block.entity;
 
 import java.util.Objects;
 
-import com.yanis48.fabriblocks.block.FBLectern;
-import com.yanis48.fabriblocks.init.ModBlockEntities;
+import com.yanisbft.fabriblocks.block.FBLectern;
+import com.yanisbft.fabriblocks.init.ModBlockEntities;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;

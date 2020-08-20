@@ -1,6 +1,6 @@
-package com.yanis48.fabriblocks.block;
+package com.yanisbft.fabriblocks.block;
 
-import com.yanis48.fabriblocks.FabriBlocks;
+import com.yanisbft.fabriblocks.FabriBlocks;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Material;

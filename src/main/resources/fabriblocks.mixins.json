@@ -1,11 +1,11 @@
 {
 	"required": true,
-	"package": "com.yanis48.fabriblocks.mixin",
+	"package": "com.yanisbft.fabriblocks.mixin",
 	"compatibilityLevel": "JAVA_8",
 	"mixins": [
 		"MixinBookOnLectern"
 	],
-	"minVersion": "0.7.11",
+	"minVersion": "0.8",
 	"injectors": {
 		"defaultRequire": 1
 	}

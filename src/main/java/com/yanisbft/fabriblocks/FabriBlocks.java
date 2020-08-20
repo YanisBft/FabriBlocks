@@ -13,6 +13,7 @@ import net.fabricmc.fabric.api.registry.FuelRegistry;
 public class FabriBlocks implements ModInitializer {
 	
 	public static final String MOD_ID = "fabriblocks";
+	public static final String COMMON_NAMESPACE = "c";
 	
 	@Override
 	public void onInitialize() {

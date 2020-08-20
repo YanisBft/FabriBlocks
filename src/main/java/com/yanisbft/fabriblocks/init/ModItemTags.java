@@ -14,6 +14,6 @@ public class ModItemTags {
 	public static final Tag<Item> LECTERNS = register("lecterns");
 	
 	public static Tag<Item> register(String id) {
-		return TagRegistry.item(new Identifier(FabriBlocks.MOD_ID, id));
+		return TagRegistry.item(new Identifier(FabriBlocks.COMMON_NAMESPACE, id));
 	}
 }
